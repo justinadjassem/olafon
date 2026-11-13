@@ -16,5 +16,7 @@ style:
 complexity:
   LongParameterList:
     ignoreAnnotated: ['Composable']
+    # Modèles et entités Room : une propriété par colonne.
+    constructorThreshold: 14
   LongMethod:
     ignoreAnnotated: ['Composable']

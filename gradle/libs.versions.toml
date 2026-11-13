@@ -23,7 +23,7 @@ media3 = "1.11.1"
 
 # Kotlin
 coroutines = "1.11.0"
-serialization = "1.13.0"
+serialization = "1.9.0" # 1.10+ exige Kotlin 2.3 ; rester aligné sur kotlin = 2.2.10
 
 # Tests
 junit = "4.13.2"
