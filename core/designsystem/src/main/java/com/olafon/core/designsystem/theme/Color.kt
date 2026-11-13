@@ -1,4 +1,4 @@
-package com.olafon.ui.theme
+package com.olafon.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 
