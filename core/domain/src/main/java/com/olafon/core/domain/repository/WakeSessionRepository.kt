@@ -12,7 +12,8 @@ interface WakeSessionRepository {
 
     suspend fun recordSnooze(sessionId: Long)
 
-    suspend fun dismiss(sessionId: Long, at: Instant)
+    /** Closes the session. [emergency] marks a ring stopped with the emergency exit code. */
+    suspend fun dismiss(sessionId: Long, at: Instant, emergency: Boolean = false)
 
     suspend fun get(sessionId: Long): WakeSession?
 

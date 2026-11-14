@@ -10,6 +10,8 @@ data class WakeSession(
     val dismissedAt: Instant? = null,
     val attempts: Int = 0,
     val snoozes: Int = 0,
+    /** True when the ring was stopped with the emergency exit code instead of the challenges. */
+    val emergencyExit: Boolean = false,
 ) {
     val dismissed: Boolean get() = dismissedAt != null
 }
