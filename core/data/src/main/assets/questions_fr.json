@@ -1,0 +1,2657 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "cul-f-001",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quelle est la capitale de la France ?",
+      "choix": [
+        "Lyon",
+        "Paris",
+        "Marseille",
+        "Bordeaux"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-f-002",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quelle est la capitale du Togo ?",
+      "choix": [
+        "Kara",
+        "Lomé",
+        "Sokodé",
+        "Kpalimé"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-f-003",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Combien de jours compte une année non bissextile ?",
+      "choix": [
+        "364",
+        "365",
+        "366",
+        "360"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-f-004",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quelle planète est la plus proche du Soleil ?",
+      "choix": [
+        "Vénus",
+        "Mars",
+        "Mercure",
+        "Terre"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-005",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Combien de continents compte la Terre ?",
+      "choix": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-006",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quel est le plus grand océan du monde ?",
+      "choix": [
+        "Atlantique",
+        "Indien",
+        "Arctique",
+        "Pacifique"
+      ],
+      "reponse": 3
+    },
+    {
+      "id": "cul-f-007",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quelle est la capitale du Ghana ?",
+      "choix": [
+        "Kumasi",
+        "Accra",
+        "Tamale",
+        "Takoradi"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-f-008",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quelle est la capitale du Nigeria ?",
+      "choix": [
+        "Lagos",
+        "Kano",
+        "Abuja",
+        "Ibadan"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-009",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Combien de minutes y a-t-il dans une heure ?",
+      "choix": [
+        "50",
+        "60",
+        "100",
+        "90"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-f-010",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quel animal est le plus grand mammifère terrestre ?",
+      "choix": [
+        "Le rhinocéros",
+        "L'hippopotame",
+        "L'éléphant d'Afrique",
+        "La girafe"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-011",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quelle est la capitale de la Côte d'Ivoire ?",
+      "choix": [
+        "Abidjan",
+        "Bouaké",
+        "Yamoussoukro",
+        "San-Pédro"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-012",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "De quelle couleur est le ciel par temps clair ?",
+      "choix": [
+        "Vert",
+        "Bleu",
+        "Rouge",
+        "Jaune"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-f-013",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quel fleuve traverse Paris ?",
+      "choix": [
+        "La Loire",
+        "Le Rhône",
+        "La Seine",
+        "La Garonne"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-014",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Combien de côtés a un hexagone ?",
+      "choix": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-f-015",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quelle est la capitale du Bénin ?",
+      "choix": [
+        "Cotonou",
+        "Parakou",
+        "Porto-Novo",
+        "Abomey"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-016",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quel est le plus long fleuve d'Afrique ?",
+      "choix": [
+        "Le Congo",
+        "Le Niger",
+        "Le Nil",
+        "Le Zambèze"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-017",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quel gaz les humains respirent-ils pour vivre ?",
+      "choix": [
+        "L'azote",
+        "L'oxygène",
+        "L'hélium",
+        "Le dioxyde de carbone"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-f-018",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "En quelle année a eu lieu le premier pas de l'Homme sur la Lune ?",
+      "choix": [
+        "1959",
+        "1969",
+        "1979",
+        "1989"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-f-019",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quelle est la monnaie utilisée au Togo ?",
+      "choix": [
+        "Le naira",
+        "Le cedi",
+        "Le franc CFA",
+        "Le dirham"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-020",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quel est le plus grand désert chaud du monde ?",
+      "choix": [
+        "Le Kalahari",
+        "Le Gobi",
+        "Le Sahara",
+        "L'Atacama"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-021",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Combien de joueurs une équipe de football aligne-t-elle sur le terrain ?",
+      "choix": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-022",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quelle est la langue officielle du Brésil ?",
+      "choix": [
+        "L'espagnol",
+        "Le portugais",
+        "Le français",
+        "L'anglais"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-f-023",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quel instrument a 88 touches ?",
+      "choix": [
+        "La guitare",
+        "Le violon",
+        "Le piano",
+        "La flûte"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-f-024",
+      "categorie": "culture",
+      "niveau": "facile",
+      "question": "Quel est le plus haut sommet du monde ?",
+      "choix": [
+        "Le Kilimandjaro",
+        "Le Mont Blanc",
+        "L'Everest",
+        "Le K2"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-m-001",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Qui a peint la Joconde ?",
+      "choix": [
+        "Michel-Ange",
+        "Léonard de Vinci",
+        "Raphaël",
+        "Botticelli"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-m-002",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quel est le plus haut sommet d'Afrique ?",
+      "choix": [
+        "Le Mont Kenya",
+        "Le Kilimandjaro",
+        "Le Ras Dashen",
+        "Le Mont Cameroun"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-m-003",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "En quelle année le Togo a-t-il obtenu son indépendance ?",
+      "choix": [
+        "1957",
+        "1960",
+        "1962",
+        "1975"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-m-004",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quel est le symbole chimique de l'or ?",
+      "choix": [
+        "Ag",
+        "Or",
+        "Au",
+        "Go"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-m-005",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Combien d'os compte le corps humain adulte ?",
+      "choix": [
+        "156",
+        "206",
+        "256",
+        "306"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-m-006",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quelle planète est surnommée la planète rouge ?",
+      "choix": [
+        "Jupiter",
+        "Vénus",
+        "Mars",
+        "Saturne"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-m-007",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Qui a écrit « Les Misérables » ?",
+      "choix": [
+        "Émile Zola",
+        "Victor Hugo",
+        "Gustave Flaubert",
+        "Honoré de Balzac"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-m-008",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quelle est la capitale de l'Australie ?",
+      "choix": [
+        "Sydney",
+        "Melbourne",
+        "Canberra",
+        "Perth"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-m-009",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quel organe pompe le sang dans le corps ?",
+      "choix": [
+        "Le foie",
+        "Les poumons",
+        "Le cœur",
+        "Les reins"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-m-010",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quel pays a pour capitale Nairobi ?",
+      "choix": [
+        "L'Ouganda",
+        "Le Kenya",
+        "La Tanzanie",
+        "L'Éthiopie"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-m-011",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Combien de cordes a une guitare classique ?",
+      "choix": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-m-012",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quel est le plus grand pays du monde par la superficie ?",
+      "choix": [
+        "Le Canada",
+        "La Chine",
+        "Les États-Unis",
+        "La Russie"
+      ],
+      "reponse": 3
+    },
+    {
+      "id": "cul-m-013",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quelle est la température d'ébullition de l'eau au niveau de la mer ?",
+      "choix": [
+        "90 °C",
+        "100 °C",
+        "110 °C",
+        "120 °C"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-m-014",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quel écrivain togolais a écrit « L'Esclave » ?",
+      "choix": [
+        "Félix Couchoro",
+        "Kossi Efoui",
+        "Sami Tchak",
+        "Tété-Michel Kpomassie"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "cul-m-015",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Qui a développé la théorie de la relativité ?",
+      "choix": [
+        "Isaac Newton",
+        "Albert Einstein",
+        "Galilée",
+        "Niels Bohr"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-m-016",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quelle mer borde Lomé ?",
+      "choix": [
+        "La mer Rouge",
+        "La Méditerranée",
+        "Le golfe de Guinée",
+        "La mer d'Arabie"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-m-017",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quel est le pays le plus peuplé d'Afrique ?",
+      "choix": [
+        "L'Égypte",
+        "L'Éthiopie",
+        "Le Nigeria",
+        "L'Afrique du Sud"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-m-018",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Combien de dents a un adulte en général, dents de sagesse comprises ?",
+      "choix": [
+        "28",
+        "30",
+        "32",
+        "36"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-m-019",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quelle est la plus petite unité du vivant ?",
+      "choix": [
+        "L'atome",
+        "La cellule",
+        "La molécule",
+        "L'organe"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-m-020",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Dans quel pays se trouve la ville de Tombouctou ?",
+      "choix": [
+        "Le Niger",
+        "Le Mali",
+        "Le Burkina Faso",
+        "La Mauritanie"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-m-021",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quel est le plus grand lac d'Afrique ?",
+      "choix": [
+        "Le lac Tchad",
+        "Le lac Tanganyika",
+        "Le lac Victoria",
+        "Le lac Malawi"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-m-022",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Qui a composé « La Flûte enchantée » ?",
+      "choix": [
+        "Beethoven",
+        "Mozart",
+        "Bach",
+        "Chopin"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-m-023",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quel pays a inventé les Jeux olympiques antiques ?",
+      "choix": [
+        "L'Italie",
+        "L'Égypte",
+        "La Grèce",
+        "La Turquie"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-m-024",
+      "categorie": "culture",
+      "niveau": "moyen",
+      "question": "Quelle est la monnaie du Ghana ?",
+      "choix": [
+        "Le naira",
+        "Le cedi",
+        "Le franc CFA",
+        "Le shilling"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-001",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "En quelle année la Coupe du monde de football a-t-elle eu lieu pour la première fois en Afrique ?",
+      "choix": [
+        "2002",
+        "2006",
+        "2010",
+        "2014"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-d-002",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quel est le plus petit pays du monde ?",
+      "choix": [
+        "Monaco",
+        "Le Vatican",
+        "Saint-Marin",
+        "Nauru"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-003",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quelle est la vitesse approximative de la lumière dans le vide ?",
+      "choix": [
+        "30 000 km/s",
+        "300 000 km/s",
+        "3 000 000 km/s",
+        "3 000 km/s"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-004",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quel physicien a énoncé le principe d'incertitude ?",
+      "choix": [
+        "Schrödinger",
+        "Heisenberg",
+        "Planck",
+        "Dirac"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-005",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Qui fut le premier président du Ghana indépendant ?",
+      "choix": [
+        "Jerry Rawlings",
+        "Kwame Nkrumah",
+        "John Kufuor",
+        "Kofi Busia"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-006",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Combien de chromosomes compte une cellule humaine normale ?",
+      "choix": [
+        "23",
+        "44",
+        "46",
+        "48"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-d-007",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quel est le plus grand pays d'Afrique par la superficie ?",
+      "choix": [
+        "Le Soudan",
+        "La Libye",
+        "L'Algérie",
+        "La RD Congo"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-d-008",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quel fleuve forme une partie de la frontière entre le Togo et le Bénin ?",
+      "choix": [
+        "Le Mono",
+        "L'Oti",
+        "Le Zio",
+        "La Volta"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "cul-d-009",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "En quelle année le mur de Berlin est-il tombé ?",
+      "choix": [
+        "1987",
+        "1989",
+        "1991",
+        "1993"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-010",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quel élément chimique a pour numéro atomique 1 ?",
+      "choix": [
+        "L'hélium",
+        "L'oxygène",
+        "L'hydrogène",
+        "Le carbone"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-d-011",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Qui a écrit « L'Enfant noir » ?",
+      "choix": [
+        "Camara Laye",
+        "Ahmadou Kourouma",
+        "Sembène Ousmane",
+        "Mongo Beti"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "cul-d-012",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quelle est la capitale de la Mongolie ?",
+      "choix": [
+        "Astana",
+        "Oulan-Bator",
+        "Bichkek",
+        "Tachkent"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-013",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quel est l'os le plus long du corps humain ?",
+      "choix": [
+        "Le tibia",
+        "L'humérus",
+        "Le fémur",
+        "Le radius"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-d-014",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quel mathématicien est l'auteur du théorème sur l'hypoténuse d'un triangle rectangle ?",
+      "choix": [
+        "Euclide",
+        "Thalès",
+        "Pythagore",
+        "Archimède"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-d-015",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quel pays africain a résisté à la colonisation européenne au XIXe siècle, hormis une brève occupation italienne ?",
+      "choix": [
+        "Le Libéria",
+        "L'Éthiopie",
+        "Le Maroc",
+        "L'Égypte"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-016",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quelle est la plus grande planète du Système solaire ?",
+      "choix": [
+        "Saturne",
+        "Neptune",
+        "Jupiter",
+        "Uranus"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-d-017",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Qui a peint « La Nuit étoilée » ?",
+      "choix": [
+        "Claude Monet",
+        "Vincent van Gogh",
+        "Paul Cézanne",
+        "Edgar Degas"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-018",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "En quelle année l'Union africaine a-t-elle remplacé l'Organisation de l'unité africaine ?",
+      "choix": [
+        "1999",
+        "2002",
+        "2005",
+        "2008"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-019",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quel est le pH d'une solution neutre ?",
+      "choix": [
+        "0",
+        "5",
+        "7",
+        "14"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-d-020",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quelle langue compte le plus de locuteurs natifs dans le monde ?",
+      "choix": [
+        "L'anglais",
+        "L'espagnol",
+        "Le mandarin",
+        "L'hindi"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-d-021",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Qui a découvert la pénicilline ?",
+      "choix": [
+        "Louis Pasteur",
+        "Alexander Fleming",
+        "Robert Koch",
+        "Marie Curie"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-022",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quelle ville togolaise est connue pour son marché aux fétiches d'Akodessewa ?",
+      "choix": [
+        "Kara",
+        "Aného",
+        "Lomé",
+        "Atakpamé"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "cul-d-023",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Quel est le point le plus profond des océans ?",
+      "choix": [
+        "La fosse de Porto Rico",
+        "La fosse des Mariannes",
+        "La fosse de Java",
+        "La fosse des Kouriles"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "cul-d-024",
+      "categorie": "culture",
+      "niveau": "difficile",
+      "question": "Combien de pays composaient la CEDEAO en 2024, avant le retrait annoncé de trois membres ?",
+      "choix": [
+        "12",
+        "15",
+        "18",
+        "20"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-001",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel nombre vient ensuite : 2, 4, 6, 8, … ?",
+      "choix": [
+        "9",
+        "10",
+        "12",
+        "14"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-002",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel nombre vient ensuite : 5, 10, 15, 20, … ?",
+      "choix": [
+        "22",
+        "25",
+        "30",
+        "35"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-003",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Si aujourd'hui est lundi, quel jour serons-nous dans 3 jours ?",
+      "choix": [
+        "Mercredi",
+        "Jeudi",
+        "Vendredi",
+        "Samedi"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-004",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel mot ne va pas avec les autres : pomme, banane, carotte, mangue ?",
+      "choix": [
+        "Pomme",
+        "Banane",
+        "Carotte",
+        "Mangue"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-f-005",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel nombre vient ensuite : 1, 3, 5, 7, … ?",
+      "choix": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-006",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Combien font 7 + 6 ?",
+      "choix": [
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-007",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel est le contraire de « haut » ?",
+      "choix": [
+        "Grand",
+        "Bas",
+        "Large",
+        "Loin"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-008",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel mot ne va pas avec les autres : chien, chat, voiture, vache ?",
+      "choix": [
+        "Chien",
+        "Chat",
+        "Voiture",
+        "Vache"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-f-009",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel nombre vient ensuite : 10, 20, 30, 40, … ?",
+      "choix": [
+        "45",
+        "50",
+        "60",
+        "70"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-010",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Si tous les chats sont des animaux et que Minou est un chat, alors Minou est…",
+      "choix": [
+        "Un chien",
+        "Un animal",
+        "Une plante",
+        "Un oiseau"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-011",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Combien font 9 − 4 ?",
+      "choix": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-f-012",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel nombre manque : 3, 6, 9, _, 15 ?",
+      "choix": [
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-f-013",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quelle forme a 3 côtés ?",
+      "choix": [
+        "Le carré",
+        "Le triangle",
+        "Le cercle",
+        "Le rectangle"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-014",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Si hier était samedi, quel jour est-ce aujourd'hui ?",
+      "choix": [
+        "Vendredi",
+        "Dimanche",
+        "Lundi",
+        "Samedi"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-015",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel mot ne va pas avec les autres : rouge, bleu, lourd, vert ?",
+      "choix": [
+        "Rouge",
+        "Bleu",
+        "Lourd",
+        "Vert"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-f-016",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Combien font 3 × 4 ?",
+      "choix": [
+        "7",
+        "12",
+        "14",
+        "16"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-017",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel nombre vient ensuite : 100, 90, 80, 70, … ?",
+      "choix": [
+        "65",
+        "60",
+        "50",
+        "40"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-018",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quelle lettre vient ensuite : A, C, E, G, … ?",
+      "choix": [
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-019",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Un père a 3 filles. Chaque fille a 1 frère. Combien d'enfants a le père ?",
+      "choix": [
+        "3",
+        "4",
+        "6",
+        "7"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-020",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Combien font 15 ÷ 3 ?",
+      "choix": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-f-021",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel mot ne va pas avec les autres : lundi, mars, mercredi, vendredi ?",
+      "choix": [
+        "Lundi",
+        "Mars",
+        "Mercredi",
+        "Vendredi"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-f-022",
+      "categorie": "logique",
+      "niveau": "facile",
+      "question": "Quel nombre vient ensuite : 1, 2, 4, 8, … ?",
+      "choix": [
+        "10",
+        "12",
+        "16",
+        "32"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-001",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Quel nombre vient ensuite : 1, 1, 2, 3, 5, 8, … ?",
+      "choix": [
+        "11",
+        "12",
+        "13",
+        "15"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-002",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Quel nombre vient ensuite : 1, 4, 9, 16, 25, … ?",
+      "choix": [
+        "30",
+        "35",
+        "36",
+        "49"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-003",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Si 3 stylos coûtent 600 francs, combien coûtent 5 stylos ?",
+      "choix": [
+        "800 francs",
+        "900 francs",
+        "1 000 francs",
+        "1 200 francs"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-004",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Quel nombre manque : 2, 6, 18, _, 162 ?",
+      "choix": [
+        "36",
+        "48",
+        "54",
+        "72"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-005",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Marie est plus grande que Paul. Paul est plus grand que Jean. Qui est le plus petit ?",
+      "choix": [
+        "Marie",
+        "Paul",
+        "Jean",
+        "On ne peut pas savoir"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-006",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Combien font 12 × 12 ?",
+      "choix": [
+        "124",
+        "132",
+        "144",
+        "148"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-007",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Un train part à 8 h 45 et roule 2 h 30. À quelle heure arrive-t-il ?",
+      "choix": [
+        "10 h 15",
+        "11 h 00",
+        "11 h 15",
+        "11 h 30"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-008",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Quel nombre vient ensuite : 3, 7, 15, 31, … ?",
+      "choix": [
+        "47",
+        "55",
+        "63",
+        "71"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-009",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "On retourne en même temps un sablier de 7 minutes et un de 4 minutes. Combien de temps après la fin du petit le grand se termine-t-il ?",
+      "choix": [
+        "2 minutes",
+        "3 minutes",
+        "4 minutes",
+        "7 minutes"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-m-010",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Quelle lettre vient ensuite : Z, X, V, T, … ?",
+      "choix": [
+        "S",
+        "R",
+        "Q",
+        "P"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-m-011",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Quel est le double de la moitié de 48 ?",
+      "choix": [
+        "12",
+        "24",
+        "48",
+        "96"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-012",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Si aujourd'hui est jeudi, quel jour serons-nous dans 10 jours ?",
+      "choix": [
+        "Samedi",
+        "Dimanche",
+        "Lundi",
+        "Mardi"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-m-013",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Quel nombre ne va pas avec les autres : 4, 9, 16, 20, 25 ?",
+      "choix": [
+        "4",
+        "9",
+        "16",
+        "20"
+      ],
+      "reponse": 3
+    },
+    {
+      "id": "log-m-014",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Un rectangle mesure 8 cm sur 5 cm. Quel est son périmètre ?",
+      "choix": [
+        "13 cm",
+        "26 cm",
+        "40 cm",
+        "80 cm"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-m-015",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Quel nombre vient ensuite : 2, 3, 5, 7, 11, … ?",
+      "choix": [
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-m-016",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Combien de minutes y a-t-il dans 2 h 15 ?",
+      "choix": [
+        "115",
+        "125",
+        "135",
+        "145"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-017",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Tous les Togolais sont africains. Kodjo est togolais. Que peut-on affirmer ?",
+      "choix": [
+        "Kodjo est européen",
+        "Kodjo est africain",
+        "Tous les Africains sont togolais",
+        "Rien du tout"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-m-018",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Un livre coûte 2 500 francs. Il est soldé de 20 %. Quel est son nouveau prix ?",
+      "choix": [
+        "1 500 francs",
+        "2 000 francs",
+        "2 250 francs",
+        "2 300 francs"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-m-019",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Quel nombre manque : 81, 27, 9, _, 1 ?",
+      "choix": [
+        "6",
+        "4",
+        "3",
+        "2"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-m-020",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Combien de fois peut-on soustraire 5 de 25 ?",
+      "choix": [
+        "Une fois",
+        "Quatre fois",
+        "Cinq fois",
+        "Une infinité de fois"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "log-m-021",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Quel est le plus grand : 3/4, 2/3 ou 5/8 ?",
+      "choix": [
+        "3/4",
+        "2/3",
+        "5/8",
+        "Ils sont égaux"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "log-m-022",
+      "categorie": "logique",
+      "niveau": "moyen",
+      "question": "Si A = 1, B = 2, C = 3, combien vaut le mot « CAB » ?",
+      "choix": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-d-001",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Quel nombre vient ensuite : 1, 2, 6, 24, 120, … ?",
+      "choix": [
+        "240",
+        "600",
+        "720",
+        "840"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-d-002",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Quel nombre vient ensuite : 2, 5, 10, 17, 26, … ?",
+      "choix": [
+        "35",
+        "37",
+        "39",
+        "41"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-d-003",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Un escargot grimpe 3 m le jour et glisse 2 m la nuit. Le mur fait 10 m. En combien de jours atteint-il le sommet ?",
+      "choix": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-d-004",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Quel nombre manque : 1, 8, 27, _, 125 ?",
+      "choix": [
+        "36",
+        "48",
+        "64",
+        "81"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-d-005",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Si 5 machines font 5 pièces en 5 minutes, combien de temps faut-il à 100 machines pour faire 100 pièces ?",
+      "choix": [
+        "5 minutes",
+        "20 minutes",
+        "100 minutes",
+        "500 minutes"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "log-d-006",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Une batte et une balle coûtent 1 100 francs. La batte coûte 1 000 francs de plus que la balle. Combien coûte la balle ?",
+      "choix": [
+        "50 francs",
+        "100 francs",
+        "110 francs",
+        "150 francs"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "log-d-007",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Quel nombre vient ensuite : 1, 11, 21, 1211, 111221, … ?",
+      "choix": [
+        "312211",
+        "1112221",
+        "122111",
+        "211211"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "log-d-008",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Combien de carrés distincts (de toute taille) compte une grille 3 × 3 ?",
+      "choix": [
+        "9",
+        "10",
+        "13",
+        "14"
+      ],
+      "reponse": 3
+    },
+    {
+      "id": "log-d-009",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Quel jour de la semaine sera-t-on 100 jours après un lundi ?",
+      "choix": [
+        "Lundi",
+        "Mardi",
+        "Mercredi",
+        "Jeudi"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-d-010",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Quel nombre manque : 4, 7, 12, 19, 28, _ ?",
+      "choix": [
+        "37",
+        "39",
+        "41",
+        "43"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-d-011",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Trois interrupteurs commandent une ampoule dans une pièce fermée. En utilisant la chaleur de l'ampoule, combien de fois au minimum faut-il entrer dans la pièce pour trouver le bon à coup sûr ?",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "Impossible"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "log-d-012",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Quel est le chiffre des unités de 7 puissance 100 ?",
+      "choix": [
+        "1",
+        "3",
+        "7",
+        "9"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "log-d-013",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Combien de poignées de main sont échangées si 10 personnes se saluent toutes une fois ?",
+      "choix": [
+        "45",
+        "50",
+        "90",
+        "100"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "log-d-014",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Quel nombre vient ensuite : 1, 3, 7, 15, 31, 63, … ?",
+      "choix": [
+        "95",
+        "111",
+        "127",
+        "255"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-d-015",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Un bassin se remplit par un robinet en 6 h et se vide par une bonde en 9 h. Les deux ouverts, en combien de temps se remplit-il ?",
+      "choix": [
+        "3 h",
+        "12 h",
+        "15 h",
+        "18 h"
+      ],
+      "reponse": 3
+    },
+    {
+      "id": "log-d-016",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Combien de nombres entiers de 1 à 100 contiennent le chiffre 7 ?",
+      "choix": [
+        "10",
+        "19",
+        "20",
+        "21"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-d-017",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Un père a 40 ans et son fils 10 ans. Dans combien d'années le père aura-t-il le double de l'âge de son fils ?",
+      "choix": [
+        "10",
+        "15",
+        "20",
+        "30"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-d-018",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Quel nombre vient ensuite : 0, 1, 1, 2, 4, 7, 13, … ?",
+      "choix": [
+        "20",
+        "22",
+        "24",
+        "26"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-d-019",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Combien y a-t-il de mardis au maximum dans un mois ?",
+      "choix": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-d-020",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Quelle est la somme des angles intérieurs d'un pentagone ?",
+      "choix": [
+        "360°",
+        "450°",
+        "540°",
+        "720°"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "log-d-021",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Si chaque lettre est décalée de 3 rangs dans l'alphabet (A → D), que signifie « ERQMRXU » ?",
+      "choix": [
+        "BONSOIR",
+        "BONJOUR",
+        "BONHEUR",
+        "BONBONS"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "log-d-022",
+      "categorie": "logique",
+      "niveau": "difficile",
+      "question": "Par combien de zéros se termine 25! (factorielle de 25) ?",
+      "choix": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "voc-f-001",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le synonyme de « rapide » ?",
+      "choix": [
+        "Lent",
+        "Vite",
+        "Grand",
+        "Petit"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-002",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le contraire de « chaud » ?",
+      "choix": [
+        "Tiède",
+        "Froid",
+        "Brûlant",
+        "Doux"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-003",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le contraire de « commencer » ?",
+      "choix": [
+        "Continuer",
+        "Finir",
+        "Débuter",
+        "Partir"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-004",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le synonyme de « content » ?",
+      "choix": [
+        "Triste",
+        "Heureux",
+        "Fâché",
+        "Fatigué"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-005",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel mot désigne un animal qui vit dans l'eau ?",
+      "choix": [
+        "Un oiseau",
+        "Un poisson",
+        "Un cheval",
+        "Un chat"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-006",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le pluriel de « cheval » ?",
+      "choix": [
+        "Chevals",
+        "Chevaux",
+        "Chevales",
+        "Chevaus"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-007",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le contraire de « jour » ?",
+      "choix": [
+        "Soir",
+        "Nuit",
+        "Matin",
+        "Midi"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-008",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le synonyme de « maison » ?",
+      "choix": [
+        "Jardin",
+        "Demeure",
+        "Rue",
+        "Voiture"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-009",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel mot désigne la personne qui soigne les malades ?",
+      "choix": [
+        "Le boulanger",
+        "Le médecin",
+        "Le maçon",
+        "Le chauffeur"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-010",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le féminin de « acteur » ?",
+      "choix": [
+        "Acteure",
+        "Actrice",
+        "Acteuse",
+        "Actrisse"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-011",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le contraire de « plein » ?",
+      "choix": [
+        "Rempli",
+        "Vide",
+        "Gros",
+        "Lourd"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-012",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le synonyme de « gentil » ?",
+      "choix": [
+        "Méchant",
+        "Aimable",
+        "Froid",
+        "Dur"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-013",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel mot signifie « très grand » ?",
+      "choix": [
+        "Minuscule",
+        "Énorme",
+        "Moyen",
+        "Court"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-014",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le contraire de « lourd » ?",
+      "choix": [
+        "Léger",
+        "Épais",
+        "Dense",
+        "Solide"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "voc-f-015",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel mot désigne le repas du matin ?",
+      "choix": [
+        "Le dîner",
+        "Le déjeuner",
+        "Le petit-déjeuner",
+        "Le goûter"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "voc-f-016",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le pluriel de « œil » ?",
+      "choix": [
+        "Œils",
+        "Yeux",
+        "Œux",
+        "Œilles"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-017",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le synonyme de « peur » ?",
+      "choix": [
+        "Joie",
+        "Crainte",
+        "Colère",
+        "Calme"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-018",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le contraire de « tôt » ?",
+      "choix": [
+        "Vite",
+        "Tard",
+        "Déjà",
+        "Bientôt"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-019",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel mot désigne un ensemble d'arbres ?",
+      "choix": [
+        "Un désert",
+        "Une forêt",
+        "Une plage",
+        "Un lac"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-020",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le synonyme de « parler » ?",
+      "choix": [
+        "Écouter",
+        "Discuter",
+        "Se taire",
+        "Dormir"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-021",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel mot désigne le lieu où l'on apprend ?",
+      "choix": [
+        "L'hôpital",
+        "L'école",
+        "Le marché",
+        "La gare"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-f-022",
+      "categorie": "vocabulaire",
+      "niveau": "facile",
+      "question": "Quel est le contraire de « gagner » ?",
+      "choix": [
+        "Perdre",
+        "Jouer",
+        "Réussir",
+        "Courir"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "voc-m-001",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Que signifie « ponctuel » ?",
+      "choix": [
+        "Qui arrive en retard",
+        "Qui arrive à l'heure",
+        "Qui parle beaucoup",
+        "Qui est généreux"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-002",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel est le synonyme de « éphémère » ?",
+      "choix": [
+        "Durable",
+        "Passager",
+        "Solide",
+        "Éternel"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-003",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel est le contraire de « généreux » ?",
+      "choix": [
+        "Avare",
+        "Riche",
+        "Poli",
+        "Aimable"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "voc-m-004",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Que signifie « frugal » ?",
+      "choix": [
+        "Copieux",
+        "Simple et peu abondant",
+        "Épicé",
+        "Sucré"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-005",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel est le synonyme de « sommeil » ?",
+      "choix": [
+        "Réveil",
+        "Assoupissement",
+        "Fatigue",
+        "Repas"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-006",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Comment appelle-t-on une personne qui a peur de tout ?",
+      "choix": [
+        "Courageuse",
+        "Craintive",
+        "Audacieuse",
+        "Téméraire"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-007",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Que signifie « insolite » ?",
+      "choix": [
+        "Habituel",
+        "Inhabituel",
+        "Ennuyeux",
+        "Bruyant"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-008",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel est le contraire de « bavard » ?",
+      "choix": [
+        "Loquace",
+        "Taciturne",
+        "Sociable",
+        "Volubile"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-009",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Que signifie « lucide » ?",
+      "choix": [
+        "Confus",
+        "Clair d'esprit",
+        "Endormi",
+        "Agité"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-010",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel mot désigne la peur des espaces clos ?",
+      "choix": [
+        "L'agoraphobie",
+        "La claustrophobie",
+        "L'arachnophobie",
+        "L'acrophobie"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-011",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel est le synonyme de « hostile » ?",
+      "choix": [
+        "Amical",
+        "Ennemi",
+        "Neutre",
+        "Chaleureux"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-012",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Que signifie « prolixe » ?",
+      "choix": [
+        "Très bref",
+        "Très bavard",
+        "Très rapide",
+        "Très discret"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-013",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel mot signifie « qui se produit tous les deux ans » ?",
+      "choix": [
+        "Biannuel",
+        "Bisannuel",
+        "Semestriel",
+        "Trimestriel"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-014",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel est le contraire de « abstrait » ?",
+      "choix": [
+        "Vague",
+        "Concret",
+        "Flou",
+        "Idéal"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-015",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Que signifie « altruiste » ?",
+      "choix": [
+        "Qui ne pense qu'à soi",
+        "Qui se soucie des autres",
+        "Qui aime l'argent",
+        "Qui est solitaire"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-016",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel est le synonyme de « diligent » ?",
+      "choix": [
+        "Paresseux",
+        "Appliqué",
+        "Distrait",
+        "Lent"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-017",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Comment appelle-t-on le fait de se lever très tôt ?",
+      "choix": [
+        "Être couche-tard",
+        "Être matinal",
+        "Être nocturne",
+        "Être tardif"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-018",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Que signifie « austère » ?",
+      "choix": [
+        "Luxueux",
+        "Sévère et dépouillé",
+        "Joyeux",
+        "Coloré"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-019",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel est le contraire de « ancien » ?",
+      "choix": [
+        "Vieux",
+        "Récent",
+        "Usé",
+        "Antique"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-020",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Que signifie « somnolent » ?",
+      "choix": [
+        "Très éveillé",
+        "À moitié endormi",
+        "Affamé",
+        "Nerveux"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-021",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel mot désigne quelqu'un qui aime la lecture ?",
+      "choix": [
+        "Un mélomane",
+        "Un bibliophile",
+        "Un cinéphile",
+        "Un gastronome"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-m-022",
+      "categorie": "vocabulaire",
+      "niveau": "moyen",
+      "question": "Quel est le synonyme de « vigilant » ?",
+      "choix": [
+        "Distrait",
+        "Attentif",
+        "Endormi",
+        "Négligent"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-001",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « obséquieux » ?",
+      "choix": [
+        "Fier et distant",
+        "Excessivement poli et servile",
+        "Très honnête",
+        "Très discret"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-002",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Quel est le synonyme de « sempiternel » ?",
+      "choix": [
+        "Rare",
+        "Perpétuel",
+        "Bref",
+        "Nouveau"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-003",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « procrastiner » ?",
+      "choix": [
+        "Agir vite",
+        "Remettre au lendemain",
+        "Travailler la nuit",
+        "Se lever tôt"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-004",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « ubiquité » ?",
+      "choix": [
+        "Le fait d'être partout à la fois",
+        "Le fait d'être invisible",
+        "Le fait d'être unique",
+        "Le fait d'être en retard"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "voc-d-005",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Quel est le contraire de « prolifique » ?",
+      "choix": [
+        "Fécond",
+        "Stérile",
+        "Abondant",
+        "Productif"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-006",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « circadien » ?",
+      "choix": [
+        "Relatif à la semaine",
+        "Relatif à un cycle d'environ 24 heures",
+        "Relatif à l'année",
+        "Relatif au cercle"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-007",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « pusillanime » ?",
+      "choix": [
+        "Courageux",
+        "Qui manque de courage",
+        "Généreux",
+        "Rusé"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-008",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « hypnagogique » ?",
+      "choix": [
+        "Relatif au réveil",
+        "Relatif à l'endormissement",
+        "Relatif au rêve",
+        "Relatif au cauchemar"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-009",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « acrimonie » ?",
+      "choix": [
+        "Douceur",
+        "Aigreur dans les propos",
+        "Gaieté",
+        "Indifférence"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-010",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « idoine » ?",
+      "choix": [
+        "Inadapté",
+        "Approprié",
+        "Ancien",
+        "Étranger"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-011",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Quel mot désigne une personne qui marche en dormant ?",
+      "choix": [
+        "Un insomniaque",
+        "Un noctambule",
+        "Un somnambule",
+        "Un narcoleptique"
+      ],
+      "reponse": 2
+    },
+    {
+      "id": "voc-d-012",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « lapalissade » ?",
+      "choix": [
+        "Un mensonge",
+        "Une évidence ridicule",
+        "Une question piège",
+        "Un compliment"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-013",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « nycthémère » ?",
+      "choix": [
+        "Une nuit sans lune",
+        "Une période de 24 heures (jour et nuit)",
+        "Un animal nocturne",
+        "Une insomnie"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-014",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Quel est le contraire de « laconique » ?",
+      "choix": [
+        "Concis",
+        "Verbeux",
+        "Bref",
+        "Sobre"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-015",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « apocryphe » ?",
+      "choix": [
+        "Authentique",
+        "Dont l'authenticité est douteuse",
+        "Très ancien",
+        "Sacré"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-016",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « inexorable » ?",
+      "choix": [
+        "Que l'on peut fléchir",
+        "Que rien ne peut arrêter",
+        "Incompréhensible",
+        "Invisible"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-017",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Quel mot désigne le fait de parler en dormant ?",
+      "choix": [
+        "La somniloquie",
+        "Le somnambulisme",
+        "La narcolepsie",
+        "L'apnée"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "voc-d-018",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « sibyllin » ?",
+      "choix": [
+        "Clair",
+        "Énigmatique",
+        "Bruyant",
+        "Tardif"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-019",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Quel est le synonyme de « vespéral » ?",
+      "choix": [
+        "Du matin",
+        "Du soir",
+        "De midi",
+        "De la nuit profonde"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-020",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « panacée » ?",
+      "choix": [
+        "Un poison",
+        "Un remède universel",
+        "Une maladie rare",
+        "Un rêve"
+      ],
+      "reponse": 1
+    },
+    {
+      "id": "voc-d-021",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « matutinal » ?",
+      "choix": [
+        "Relatif au matin",
+        "Relatif au soir",
+        "Relatif au repas",
+        "Relatif à la mer"
+      ],
+      "reponse": 0
+    },
+    {
+      "id": "voc-d-022",
+      "categorie": "vocabulaire",
+      "niveau": "difficile",
+      "question": "Que signifie « velléitaire » ?",
+      "choix": [
+        "Qui agit avec détermination",
+        "Qui a des intentions sans passer à l'acte",
+        "Qui aime le risque",
+        "Qui est très ponctuel"
+      ],
+      "reponse": 1
+    }
+  ]
+}
