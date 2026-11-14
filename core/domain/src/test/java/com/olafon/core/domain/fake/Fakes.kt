@@ -53,6 +53,9 @@ class FakeWakeSessionRepository : WakeSessionRepository {
 
     override suspend fun get(sessionId: Long): WakeSession? = sessions[sessionId]
 
+    override suspend fun latestOpenSince(since: Instant): WakeSession? =
+        sessions.values.filter { !it.dismissed && it.ringAt >= since }.maxByOrNull { it.ringAt }
+
     override fun observeRecent(limit: Int): Flow<List<WakeSession>> =
         MutableStateFlow(sessions.values.sortedByDescending { it.ringAt }.take(limit))
 

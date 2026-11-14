@@ -39,6 +39,7 @@ L'écran provisoire de l'app permet de programmer une alarme test dans 1 ou 2 mi
 4. App fermée depuis les récents pendant la sonnerie : le son continue.
 5. Volume baissé depuis le panneau système pendant la sonnerie : il remonte en deux secondes.
 6. Changement de fuseau ou d'heure manuelle : l'alarme se recale.
+7. Téléphone éteint pendant la sonnerie puis rallumé : elle reprend dès le démarrage, sur la même session.
 
 ```bash
 adb shell dumpsys alarm | grep com.olafon          # alarmes programmées

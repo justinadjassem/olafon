@@ -23,6 +23,9 @@ interface WakeSessionDao {
     @Query("UPDATE wake_sessions SET dismissedAt = :dismissedAt, emergencyExit = :emergency WHERE id = :id")
     suspend fun dismiss(id: Long, dismissedAt: Long, emergency: Boolean)
 
+    @Query("SELECT * FROM wake_sessions WHERE dismissedAt IS NULL AND ringAt >= :since ORDER BY ringAt DESC LIMIT 1")
+    suspend fun latestOpenSince(since: Long): WakeSessionEntity?
+
     @Query("SELECT * FROM wake_sessions ORDER BY ringAt DESC LIMIT :limit")
     fun observeRecent(limit: Int): Flow<List<WakeSessionEntity>>
 }

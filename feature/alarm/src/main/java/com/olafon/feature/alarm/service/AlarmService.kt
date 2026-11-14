@@ -63,9 +63,20 @@ class AlarmService : Service() {
     private fun startRing(alarmId: Long, intent: Intent) {
         val sessionId = intent.getLongExtra(AlarmReceiver.EXTRA_SESSION_ID, AlarmReceiver.NO_ID)
             .takeIf { it != AlarmReceiver.NO_ID }
+        val current = controller.ringing.value
+        // Both boot broadcasts may ask to resume the same interrupted session: keep the ring as it is.
+        if (current != null && sessionId == current.session.id) {
+            ServiceCompat.startForeground(
+                this,
+                AlarmNotifications.NOTIFICATION_ID,
+                notifications.ringing(alarmId, sessionId, current),
+                ServiceInfo.FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED,
+            )
+            return
+        }
         // A second alarm while one rings: drop the current notification first, because SystemUI only launches the
         // full-screen intent of a newly posted notification, never of an update.
-        if (controller.ringing.value != null) {
+        if (current != null) {
             ServiceCompat.stopForeground(this, ServiceCompat.STOP_FOREGROUND_REMOVE)
         }
         // Go foreground right away: the system grants only a few seconds after startForegroundService().
