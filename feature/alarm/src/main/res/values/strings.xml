@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="alarm_channel_name">Sonnerie</string>
+    <string name="alarm_channel_description">Alarme en cours : la notification reste affichée tant que les défis ne sont pas réussis.</string>
+
+    <string name="ring_title">Réveil</string>
+    <string name="ring_notification_text">Appuie pour commencer les défis</string>
+    <string name="ring_loading">Chargement de l\'alarme…</string>
+    <string name="ring_start_challenges">Commencer les défis</string>
+    <plurals name="ring_snooze">
+        <item quantity="one">Rappel dans 5 min (%1$d restant)</item>
+        <item quantity="other">Rappel dans 5 min (%1$d restants)</item>
+    </plurals>
+    <string name="ring_snooze_exhausted">Plus de rappel possible</string>
+    <string name="ring_emergency_exit">Sortie d\'urgence</string>
+    <string name="action_snooze">Rappel</string>
+    <string name="action_confirm">Valider</string>
+    <string name="action_cancel">Annuler</string>
+
+    <string name="emergency_dialog_title">Code de sortie d\'urgence</string>
+    <string name="emergency_dialog_text">Saisis ton code à 6 chiffres pour arrêter l\'alarme sans défi. La sortie sera enregistrée.</string>
+    <string name="emergency_code_rejected">Code incorrect</string>
+
+    <string name="onboarding_title">Avant la première alarme</string>
+    <string name="onboarding_intro">Olafon a besoin de quelques autorisations pour sonner à l\'heure, écran verrouillé et même en veille profonde.</string>
+    <string name="onboarding_notifications_title">Notifications</string>
+    <string name="onboarding_notifications_text">Affiche la sonnerie en cours et le bouton de rappel.</string>
+    <string name="onboarding_full_screen_title">Affichage sur l\'écran verrouillé</string>
+    <string name="onboarding_full_screen_text">Ouvre l\'écran de réveil par-dessus le verrouillage.</string>
+    <string name="onboarding_exact_alarm_title">Alarmes exactes</string>
+    <string name="onboarding_exact_alarm_text">Garantit la sonnerie à la minute, même en mode Économie d\'énergie.</string>
+    <string name="onboarding_battery_title">Batterie sans restriction</string>
+    <string name="onboarding_battery_text">Empêche le système de mettre Olafon en sommeil. Recommandé, surtout sur Tecno, Infinix, Xiaomi et Samsung.</string>
+    <string name="onboarding_battery_tip_xiaomi">Xiaomi : Paramètres › Applications › Olafon › Économie de batterie › Aucune restriction, puis active le démarrage automatique.</string>
+    <string name="onboarding_battery_tip_transsion">Tecno / Infinix : Gestionnaire de téléphone › Gestion de la batterie, ajoute Olafon aux applications protégées et autorise le démarrage automatique.</string>
+    <string name="onboarding_battery_tip_samsung">Samsung : Paramètres › Batterie › Limites d\'utilisation en arrière-plan, retire Olafon des applications en veille.</string>
+    <string name="onboarding_battery_tip_generic">Si l\'alarme ne sonne pas, retire Olafon de l\'optimisation de batterie dans les paramètres du téléphone.</string>
+    <string name="onboarding_status_granted">Accordé</string>
+    <string name="onboarding_status_missing">À autoriser</string>
+    <string name="onboarding_action_allow">Autoriser</string>
+    <string name="onboarding_action_open_settings">Ouvrir les paramètres</string>
+    <string name="onboarding_continue">Continuer</string>
+</resources>
