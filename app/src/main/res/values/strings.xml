@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">olafon</string>
+    <string name="app_name">Olafon</string>
+
+    <!-- Écran provisoire de l'étape 2, remplacé par l'accueil de l'étape 4. -->
+    <string name="test_home_title">Alarmes</string>
+    <string name="test_home_intro">Écran provisoire du moteur d\'alarme : programme une alarme test, verrouille le téléphone et vérifie qu\'elle sonne.</string>
+    <string name="test_home_in_1_min">Dans 1 min</string>
+    <string name="test_home_in_2_min">Dans 2 min</string>
+    <string name="test_home_delete">Supprimer</string>
 </resources>
