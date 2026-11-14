@@ -29,6 +29,24 @@ Android Studio : ouvrir le dossier, laisser la synchronisation Gradle se termine
 
 La CI GitHub Actions exécute ces trois étapes puis construit l'APK debug sur chaque pull request vers `develop` et `main`.
 
+## Tester le moteur d'alarme sur un vrai téléphone
+
+L'écran provisoire de l'app permet de programmer une alarme test dans 1 ou 2 minutes. Scénarios à rejouer avant chaque release, de préférence sur deux marques (Tecno/Infinix, Xiaomi, Samsung) :
+
+1. Téléphone verrouillé, écran éteint : l'alarme sonne et l'écran s'allume.
+2. Mode Doze forcé puis alarme : elle sonne.
+3. Redémarrage avant l'heure, sans déverrouiller : elle sonne.
+4. App fermée depuis les récents pendant la sonnerie : le son continue.
+5. Volume baissé depuis le panneau système pendant la sonnerie : il remonte en deux secondes.
+6. Changement de fuseau ou d'heure manuelle : l'alarme se recale.
+
+```bash
+adb shell dumpsys alarm | grep com.olafon          # alarmes programmées
+adb shell dumpsys deviceidle force-idle            # simuler Doze
+adb shell dumpsys deviceidle unforce
+./gradlew connectedDebugAndroidTest                # tests instrumentés (appareil branché)
+```
+
 ## Structure
 
 | Module | Rôle |
