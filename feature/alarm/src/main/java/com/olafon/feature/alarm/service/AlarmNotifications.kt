@@ -45,7 +45,9 @@ class AlarmNotifications @Inject constructor(@ApplicationContext private val con
             .setPriority(NotificationCompat.PRIORITY_MAX)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
             .setOngoing(true)
-            .setSilent(true)
+            // Never setSilent(): NotificationCompat would file it in a "silent" group with GROUP_ALERT_SUMMARY and
+            // SystemUI would then neither peek nor launch the full-screen intent. The channel itself is mute.
+            .setForegroundServiceBehavior(NotificationCompat.FOREGROUND_SERVICE_IMMEDIATE)
             .setContentIntent(open)
             .setFullScreenIntent(open, true)
         if (ringing?.canSnooze == true) {
