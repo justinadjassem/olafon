@@ -36,6 +36,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.activity.compose)
     implementation(libs.coroutines.android)
+    implementation(libs.media3.exoplayer)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
