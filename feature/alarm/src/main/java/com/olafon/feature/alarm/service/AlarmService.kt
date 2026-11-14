@@ -63,6 +63,11 @@ class AlarmService : Service() {
     private fun startRing(alarmId: Long, intent: Intent) {
         val sessionId = intent.getLongExtra(AlarmReceiver.EXTRA_SESSION_ID, AlarmReceiver.NO_ID)
             .takeIf { it != AlarmReceiver.NO_ID }
+        // A second alarm while one rings: drop the current notification first, because SystemUI only launches the
+        // full-screen intent of a newly posted notification, never of an update.
+        if (controller.ringing.value != null) {
+            ServiceCompat.stopForeground(this, ServiceCompat.STOP_FOREGROUND_REMOVE)
+        }
         // Go foreground right away: the system grants only a few seconds after startForegroundService().
         ServiceCompat.startForeground(
             this,
