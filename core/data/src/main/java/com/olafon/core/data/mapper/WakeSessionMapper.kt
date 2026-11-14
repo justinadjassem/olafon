@@ -11,4 +11,5 @@ fun WakeSessionEntity.toDomain(): WakeSession = WakeSession(
     dismissedAt = dismissedAt?.let(Instant::ofEpochMilli),
     attempts = attempts,
     snoozes = snoozes,
+    emergencyExit = emergencyExit,
 )

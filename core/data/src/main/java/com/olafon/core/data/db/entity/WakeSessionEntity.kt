@@ -1,5 +1,6 @@
 package com.olafon.core.data.db.entity
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
@@ -16,4 +17,5 @@ data class WakeSessionEntity(
     val dismissedAt: Long?,
     val attempts: Int,
     val snoozes: Int,
+    @ColumnInfo(defaultValue = "0") val emergencyExit: Boolean = false,
 )

@@ -27,7 +27,8 @@ class WakeSessionRepositoryImpl @Inject constructor(private val dao: WakeSession
 
     override suspend fun recordSnooze(sessionId: Long) = dao.incrementSnoozes(sessionId)
 
-    override suspend fun dismiss(sessionId: Long, at: Instant) = dao.dismiss(sessionId, at.toEpochMilli())
+    override suspend fun dismiss(sessionId: Long, at: Instant, emergency: Boolean) =
+        dao.dismiss(sessionId, at.toEpochMilli(), emergency)
 
     override suspend fun get(sessionId: Long): WakeSession? = dao.get(sessionId)?.toDomain()
 

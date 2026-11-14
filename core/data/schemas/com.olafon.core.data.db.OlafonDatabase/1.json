@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "46a72e6d79585e0e3ebbcd1a9bf17871",
+    "identityHash": "3bdbadfcc48cd607550e4ffac42823c6",
     "entities": [
       {
         "tableName": "alarms",
@@ -149,7 +149,7 @@
       },
       {
         "tableName": "wake_sessions",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `alarmId` INTEGER NOT NULL, `ringAt` INTEGER NOT NULL, `dismissedAt` INTEGER, `attempts` INTEGER NOT NULL, `snoozes` INTEGER NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `alarmId` INTEGER NOT NULL, `ringAt` INTEGER NOT NULL, `dismissedAt` INTEGER, `attempts` INTEGER NOT NULL, `snoozes` INTEGER NOT NULL, `emergencyExit` INTEGER NOT NULL DEFAULT 0)",
         "fields": [
           {
             "fieldPath": "id",
@@ -185,6 +185,13 @@
             "columnName": "snoozes",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "emergencyExit",
+            "columnName": "emergencyExit",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
           }
         ],
         "primaryKey": {
@@ -217,7 +224,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '46a72e6d79585e0e3ebbcd1a9bf17871')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3bdbadfcc48cd607550e4ffac42823c6')"
     ]
   }
 }

@@ -20,8 +20,8 @@ interface WakeSessionDao {
     @Query("UPDATE wake_sessions SET snoozes = snoozes + 1 WHERE id = :id")
     suspend fun incrementSnoozes(id: Long)
 
-    @Query("UPDATE wake_sessions SET dismissedAt = :dismissedAt WHERE id = :id")
-    suspend fun dismiss(id: Long, dismissedAt: Long)
+    @Query("UPDATE wake_sessions SET dismissedAt = :dismissedAt, emergencyExit = :emergency WHERE id = :id")
+    suspend fun dismiss(id: Long, dismissedAt: Long, emergency: Boolean)
 
     @Query("SELECT * FROM wake_sessions ORDER BY ringAt DESC LIMIT :limit")
     fun observeRecent(limit: Int): Flow<List<WakeSessionEntity>>
