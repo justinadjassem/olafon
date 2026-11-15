@@ -3,6 +3,7 @@ package com.olafon.home
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.olafon.core.domain.model.Alarm
+import com.olafon.core.domain.model.ChallengeType
 import com.olafon.core.domain.repository.AlarmRepository
 import com.olafon.core.domain.scheduler.AlarmScheduler
 import com.olafon.core.domain.usecase.SaveAlarmUseCase
@@ -31,7 +32,15 @@ class TestAlarmViewModel @Inject constructor(
     fun addTestAlarm(inMinutes: Long) {
         viewModelScope.launch {
             val at = ZonedDateTime.now(clock).plusMinutes(inMinutes)
-            saveAlarm(Alarm(hour = at.hour, minute = at.minute, label = "Test $inMinutes min"))
+            // Every challenge type, so one test alarm exercises the whole chain of step 3.
+            saveAlarm(
+                Alarm(
+                    hour = at.hour,
+                    minute = at.minute,
+                    label = "Test $inMinutes min",
+                    challenges = listOf(ChallengeType.PATTERN, ChallengeType.QUESTION, ChallengeType.MATH),
+                ),
+            )
         }
     }
 

@@ -20,6 +20,8 @@ data class RingUiState(
     val ringing: RingingAlarm? = null,
     val hasEmergencyCode: Boolean = false,
     val emergencyCodeRejected: Boolean = false,
+    /** True once the user tapped "start the challenges": the snooze is no longer offered. */
+    val challengesStarted: Boolean = false,
     /** True once the user ended the ring from this screen: the activity must close. */
     val finished: Boolean = false,
 )
@@ -41,7 +43,11 @@ class RingViewModel @Inject constructor(private val controller: RingController, 
         viewModelScope.launch { if (controller.snooze()) finish() }
     }
 
-    /** Temporary until the challenges of step 3 call it on success. */
+    fun onStartChallenges() {
+        local.value = local.value.copy(challengesStarted = true)
+    }
+
+    /** Called by the challenge session once the last challenge is passed. */
     fun onChallengesSolved() {
         viewModelScope.launch {
             controller.dismiss()
