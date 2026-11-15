@@ -1,6 +1,7 @@
 package com.olafon.core.domain.fake
 
 import com.olafon.core.domain.model.Alarm
+import com.olafon.core.domain.model.RingInterruption
 import com.olafon.core.domain.model.ThemeMode
 import com.olafon.core.domain.model.UserPreferences
 import com.olafon.core.domain.model.WakeSession
@@ -50,6 +51,9 @@ class FakeWakeSessionRepository : WakeSessionRepository {
 
     override suspend fun dismiss(sessionId: Long, at: Instant, emergency: Boolean) =
         update(sessionId) { copy(dismissedAt = at, emergencyExit = emergency) }
+
+    override suspend fun recordInterruption(sessionId: Long, interruption: RingInterruption) =
+        update(sessionId) { copy(interruption = interruption) }
 
     override suspend fun get(sessionId: Long): WakeSession? = sessions[sessionId]
 

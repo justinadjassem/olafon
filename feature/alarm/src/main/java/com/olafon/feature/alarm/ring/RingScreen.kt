@@ -29,10 +29,14 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.olafon.core.domain.model.RingInterruption
 import com.olafon.core.domain.model.RingingAlarm
 import com.olafon.feature.alarm.R
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 import kotlinx.coroutines.delay
 
 /** Plain ring screen for the engine step; the lime design of step 4 and the challenges of step 3 replace it. */
@@ -110,6 +114,15 @@ private fun RingContent(
             )
             val label = ringing.alarm.label.ifBlank { stringResource(R.string.ring_title) }
             Text(text = label, style = MaterialTheme.typography.titleLarge)
+            ringing.session.interruption?.let { interruption ->
+                Spacer(Modifier.height(16.dp))
+                Text(
+                    text = interruptionText(interruption),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.error,
+                    textAlign = TextAlign.Center,
+                )
+            }
         }
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -146,6 +159,14 @@ private fun RingContent(
             onDismiss = { askingCode = false },
         )
     }
+}
+
+@Composable
+private fun interruptionText(interruption: RingInterruption): String = if (interruption.cleanShutdown) {
+    val time = interruption.at.atZone(ZoneId.systemDefault()).format(DateTimeFormatter.ofPattern("HH:mm"))
+    stringResource(R.string.ring_interrupted_shutdown, time)
+} else {
+    stringResource(R.string.ring_interrupted_unknown)
 }
 
 @Composable

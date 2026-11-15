@@ -3,6 +3,7 @@ package com.olafon.core.data.repository
 import com.olafon.core.data.db.dao.WakeSessionDao
 import com.olafon.core.data.db.entity.WakeSessionEntity
 import com.olafon.core.data.mapper.toDomain
+import com.olafon.core.domain.model.RingInterruption
 import com.olafon.core.domain.model.WakeSession
 import com.olafon.core.domain.repository.WakeSessionRepository
 import java.time.Instant
@@ -29,6 +30,13 @@ class WakeSessionRepositoryImpl @Inject constructor(private val dao: WakeSession
 
     override suspend fun dismiss(sessionId: Long, at: Instant, emergency: Boolean) =
         dao.dismiss(sessionId, at.toEpochMilli(), emergency)
+
+    override suspend fun recordInterruption(sessionId: Long, interruption: RingInterruption) = dao.recordInterruption(
+        sessionId,
+        interruption.at.toEpochMilli(),
+        interruption.cleanShutdown,
+        interruption.batteryPercent,
+    )
 
     override suspend fun get(sessionId: Long): WakeSession? = dao.get(sessionId)?.toDomain()
 

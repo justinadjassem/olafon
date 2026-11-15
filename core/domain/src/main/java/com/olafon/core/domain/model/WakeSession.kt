@@ -12,6 +12,8 @@ data class WakeSession(
     val snoozes: Int = 0,
     /** True when the ring was stopped with the emergency exit code instead of the challenges. */
     val emergencyExit: Boolean = false,
+    /** Set when the ring was cut short by a power-off, a reboot or a crash before being dismissed. */
+    val interruption: RingInterruption? = null,
 ) {
     val dismissed: Boolean get() = dismissedAt != null
 }

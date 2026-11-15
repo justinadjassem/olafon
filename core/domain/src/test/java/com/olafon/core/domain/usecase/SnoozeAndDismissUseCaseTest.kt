@@ -4,6 +4,7 @@ import com.olafon.core.domain.fake.FakePreferencesRepository
 import com.olafon.core.domain.fake.FakeWakeSessionRepository
 import com.olafon.core.domain.fake.RecordingScheduler
 import com.olafon.core.domain.model.Alarm
+import com.olafon.core.domain.model.RingInterruption
 import com.olafon.core.domain.model.RingingAlarm
 import com.olafon.core.domain.model.WakeSession
 import java.time.Clock
@@ -75,6 +76,18 @@ class SnoozeAndDismissUseCaseTest {
 
         assertTrue(emergency(ringing, "123456"))
         assertTrue(sessions.get(ringing.session.id)!!.emergencyExit)
+    }
+
+    @Test
+    fun `shutdown during a ring is recorded on the session with the battery level`() = runTest {
+        val ringing = ringing()
+
+        RecordRingShutdownUseCase(sessions, clock)(ringing, batteryPercent = 42)
+
+        assertEquals(
+            RingInterruption(at = now, cleanShutdown = true, batteryPercent = 42),
+            sessions.get(ringing.session.id)!!.interruption,
+        )
     }
 
     @Test

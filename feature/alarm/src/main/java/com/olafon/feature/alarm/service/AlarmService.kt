@@ -1,12 +1,17 @@
 package com.olafon.feature.alarm.service
 
 import android.app.Service
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.pm.ServiceInfo
+import android.os.BatteryManager
 import android.os.IBinder
 import android.util.Log
 import androidx.core.app.ServiceCompat
+import androidx.core.content.ContextCompat
+import com.olafon.core.domain.usecase.RecordRingShutdownUseCase
 import com.olafon.core.domain.usecase.StartRingingUseCase
 import com.olafon.feature.alarm.receiver.AlarmReceiver
 import com.olafon.feature.alarm.sound.AlarmPlayer
@@ -24,6 +29,9 @@ import kotlinx.coroutines.launch
  *
  * The ring intent is redelivered if the system kills the process mid-ring, which restarts the sound. In that rare
  * case a second wake session may be opened for the same ring; the next occurrence is armed idempotently.
+ *
+ * A shutdown or reboot announced by the system while the alarm rings is written on the wake session before the
+ * power goes, so the resumed ring and the statistics can tell it from a crash.
  */
 @AndroidEntryPoint
 class AlarmService : Service() {
@@ -35,11 +43,38 @@ class AlarmService : Service() {
 
     @Inject lateinit var player: AlarmPlayer
 
+    @Inject lateinit var recordShutdown: RecordRingShutdownUseCase
+
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
+
+    private val shutdownReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            val ringing = controller.ringing.value ?: return
+            val battery = getSystemService(BatteryManager::class.java)
+                ?.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
+                ?.takeIf { it in 0..MAX_BATTERY_PERCENT }
+            Log.i(TAG, "Shutdown announced while alarm ${ringing.alarm.id} rings (battery $battery%)")
+            // The broadcast is ordered: the system waits for finish() before cutting the power.
+            val pending = goAsync()
+            scope.launch {
+                try {
+                    recordShutdown(ringing, battery)
+                } finally {
+                    pending.finish()
+                }
+            }
+        }
+    }
 
     override fun onCreate() {
         super.onCreate()
         notifications.ensureChannel()
+        ContextCompat.registerReceiver(
+            this,
+            shutdownReceiver,
+            IntentFilter(Intent.ACTION_SHUTDOWN),
+            ContextCompat.RECEIVER_NOT_EXPORTED,
+        )
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -102,6 +137,7 @@ class AlarmService : Service() {
     }
 
     override fun onDestroy() {
+        unregisterReceiver(shutdownReceiver)
         player.stop()
         controller.onRingStopped()
         ServiceCompat.stopForeground(this, ServiceCompat.STOP_FOREGROUND_REMOVE)
@@ -114,6 +150,7 @@ class AlarmService : Service() {
     companion object {
         private const val TAG = "AlarmService"
         private const val ACTION_SNOOZE = "com.olafon.action.SNOOZE"
+        private const val MAX_BATTERY_PERCENT = 100
 
         fun ringIntent(context: Context, alarmId: Long, sessionId: Long?): Intent =
             Intent(context, AlarmService::class.java)
