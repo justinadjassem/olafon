@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_progress">Défi %1$d sur %2$d</string>
+    <string name="challenge_type_pattern">Schéma</string>
+    <string name="challenge_type_question">Question</string>
+    <string name="challenge_type_math">Calcul</string>
+    <string name="challenge_loading">Préparation du défi…</string>
+
+    <string name="pattern_memorize">Mémorise le schéma</string>
+    <string name="pattern_replay">Reproduis le schéma</string>
+    <string name="pattern_wrong">Ce n\'est pas le bon schéma, encore %1$d essai(s)</string>
+    <string name="pattern_new">Raté trois fois : voici un nouveau schéma</string>
+
+    <string name="question_wrong">Mauvaise réponse, en voici une autre</string>
+
+    <string name="math_answer">Réponse</string>
+    <string name="math_wrong">Mauvaise réponse, encore %1$d essai(s)</string>
+    <string name="math_new">Raté trois fois : voici une nouvelle opération</string>
+    <string name="action_validate">Valider</string>
+</resources>
