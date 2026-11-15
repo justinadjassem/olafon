@@ -17,5 +17,8 @@ interface WakeSessionRepository {
 
     suspend fun get(sessionId: Long): WakeSession?
 
+    /** The most recent session not dismissed yet that started at or after [since], if any. */
+    suspend fun latestOpenSince(since: Instant): WakeSession?
+
     fun observeRecent(limit: Int): Flow<List<WakeSession>>
 }

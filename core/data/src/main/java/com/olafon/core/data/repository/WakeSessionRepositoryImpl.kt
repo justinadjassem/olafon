@@ -32,6 +32,9 @@ class WakeSessionRepositoryImpl @Inject constructor(private val dao: WakeSession
 
     override suspend fun get(sessionId: Long): WakeSession? = dao.get(sessionId)?.toDomain()
 
+    override suspend fun latestOpenSince(since: Instant): WakeSession? =
+        dao.latestOpenSince(since.toEpochMilli())?.toDomain()
+
     override fun observeRecent(limit: Int): Flow<List<WakeSession>> =
         dao.observeRecent(limit).map { list -> list.map(WakeSessionEntity::toDomain) }
 }
