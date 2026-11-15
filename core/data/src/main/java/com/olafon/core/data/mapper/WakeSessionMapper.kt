@@ -1,6 +1,7 @@
 package com.olafon.core.data.mapper
 
 import com.olafon.core.data.db.entity.WakeSessionEntity
+import com.olafon.core.domain.model.RingInterruption
 import com.olafon.core.domain.model.WakeSession
 import java.time.Instant
 
@@ -12,4 +13,11 @@ fun WakeSessionEntity.toDomain(): WakeSession = WakeSession(
     attempts = attempts,
     snoozes = snoozes,
     emergencyExit = emergencyExit,
+    interruption = interruptedAt?.let {
+        RingInterruption(
+            at = Instant.ofEpochMilli(it),
+            cleanShutdown = cleanShutdown,
+            batteryPercent = interruptionBattery,
+        )
+    },
 )

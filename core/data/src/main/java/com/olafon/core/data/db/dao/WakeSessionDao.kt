@@ -11,6 +11,12 @@ interface WakeSessionDao {
     @Insert
     suspend fun insert(session: WakeSessionEntity): Long
 
+    @Query(
+        "UPDATE wake_sessions SET interruptedAt = :at, cleanShutdown = :clean, interruptionBattery = :battery " +
+            "WHERE id = :id",
+    )
+    suspend fun recordInterruption(id: Long, at: Long, clean: Boolean, battery: Int?)
+
     @Query("SELECT * FROM wake_sessions WHERE id = :id")
     suspend fun get(id: Long): WakeSessionEntity?
 

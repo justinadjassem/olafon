@@ -18,4 +18,8 @@ data class WakeSessionEntity(
     val attempts: Int,
     val snoozes: Int,
     @ColumnInfo(defaultValue = "0") val emergencyExit: Boolean = false,
+    /** Epoch milliseconds; set when the ring was cut short by a power-off, a reboot or a crash. */
+    val interruptedAt: Long? = null,
+    @ColumnInfo(defaultValue = "0") val cleanShutdown: Boolean = false,
+    val interruptionBattery: Int? = null,
 )
