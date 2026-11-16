@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.olafon.core.data.db.OlafonDatabase
 import com.olafon.core.data.db.dao.AlarmDao
+import com.olafon.core.data.db.dao.BriefingDao
 import com.olafon.core.data.db.dao.QuestionDao
 import com.olafon.core.data.db.dao.WakeSessionDao
 import dagger.Module
@@ -37,6 +38,9 @@ object DatabaseModule {
 
     @Provides
     fun provideWakeSessionDao(db: OlafonDatabase): WakeSessionDao = db.wakeSessionDao()
+
+    @Provides
+    fun provideBriefingDao(db: OlafonDatabase): BriefingDao = db.briefingDao()
 
     @Provides
     @Singleton
