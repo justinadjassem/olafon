@@ -104,6 +104,10 @@ class FakePreferencesRepository(private var emergencyCode: String? = null) : Pre
 
     override suspend fun setEveningSyncHour(hour: Int) = state.update { copy(eveningSyncHour = hour) }
 
+    override suspend fun setCalendarIncluded(calendarId: Long, included: Boolean) = state.update {
+        copy(excludedCalendarIds = if (included) excludedCalendarIds - calendarId else excludedCalendarIds + calendarId)
+    }
+
     override suspend fun setEmergencyExitCode(code: String?) {
         emergencyCode = code
         state.update { copy(hasEmergencyExitCode = code != null) }

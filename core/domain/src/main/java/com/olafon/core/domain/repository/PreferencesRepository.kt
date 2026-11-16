@@ -13,6 +13,8 @@ interface PreferencesRepository {
 
     suspend fun setEveningSyncHour(hour: Int)
 
+    suspend fun setCalendarIncluded(calendarId: Long, included: Boolean)
+
     /** Stores a new emergency exit code, or removes it when [code] is null. Only a hash is persisted. */
     suspend fun setEmergencyExitCode(code: String?)
 
