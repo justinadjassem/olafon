@@ -43,6 +43,8 @@ dependencies {
     implementation(project(":core:data"))
     implementation(project(":core:designsystem"))
     implementation(project(":feature:alarm"))
+    implementation(project(":feature:briefing"))
+    implementation(project(":integration:calendar"))
     implementation(project(":feature:challenges"))
     implementation(project(":feature:home"))
 
@@ -61,6 +63,8 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
+    implementation(libs.hilt.work)
+    implementation(libs.work.runtime)
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
