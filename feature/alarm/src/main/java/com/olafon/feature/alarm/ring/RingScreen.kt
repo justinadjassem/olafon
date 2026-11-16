@@ -35,6 +35,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.olafon.core.domain.model.RingInterruption
 import com.olafon.core.domain.model.RingingAlarm
 import com.olafon.feature.alarm.R
+import com.olafon.feature.challenges.session.ChallengeSession
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import kotlinx.coroutines.delay
@@ -64,7 +65,9 @@ fun RingScreen(viewModel: RingViewModel, onFinished: () -> Unit) {
                 ringing = ringing,
                 hasEmergencyCode = state.hasEmergencyCode,
                 emergencyCodeRejected = state.emergencyCodeRejected,
+                challengesStarted = state.challengesStarted,
                 onSnooze = viewModel::onSnooze,
+                onStartChallenges = viewModel::onStartChallenges,
                 onChallengesSolved = viewModel::onChallengesSolved,
                 onEmergencyCode = viewModel::onEmergencyCode,
                 onEmergencyCodeEdited = viewModel::onEmergencyCodeEdited,
@@ -92,7 +95,9 @@ private fun RingContent(
     ringing: RingingAlarm,
     hasEmergencyCode: Boolean,
     emergencyCodeRejected: Boolean,
+    challengesStarted: Boolean,
     onSnooze: () -> Unit,
+    onStartChallenges: () -> Unit,
     onChallengesSolved: () -> Unit,
     onEmergencyCode: (String) -> Unit,
     onEmergencyCodeEdited: () -> Unit,
@@ -125,22 +130,34 @@ private fun RingContent(
             }
         }
 
+        if (challengesStarted) {
+            ChallengeSession(
+                types = ringing.alarm.challenges,
+                difficulty = ringing.alarm.difficulty,
+                sessionId = ringing.session.id,
+                onAllSolved = onChallengesSolved,
+                modifier = Modifier.weight(1f, fill = false),
+            )
+        }
+
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Button(onClick = onChallengesSolved, modifier = Modifier.fillMaxWidth()) {
-                Text(stringResource(R.string.ring_start_challenges))
-            }
-            Spacer(Modifier.height(12.dp))
-            OutlinedButton(
-                onClick = onSnooze,
-                enabled = ringing.canSnooze,
-                modifier = Modifier.fillMaxWidth(),
-            ) {
-                val text = if (ringing.canSnooze) {
-                    pluralStringResource(R.plurals.ring_snooze, ringing.snoozesLeft, ringing.snoozesLeft)
-                } else {
-                    stringResource(R.string.ring_snooze_exhausted)
+            if (!challengesStarted) {
+                Button(onClick = onStartChallenges, modifier = Modifier.fillMaxWidth()) {
+                    Text(stringResource(R.string.ring_start_challenges))
                 }
-                Text(text)
+                Spacer(Modifier.height(12.dp))
+                OutlinedButton(
+                    onClick = onSnooze,
+                    enabled = ringing.canSnooze,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    val text = if (ringing.canSnooze) {
+                        pluralStringResource(R.plurals.ring_snooze, ringing.snoozesLeft, ringing.snoozesLeft)
+                    } else {
+                        stringResource(R.string.ring_snooze_exhausted)
+                    }
+                    Text(text)
+                }
             }
             if (hasEmergencyCode) {
                 Spacer(Modifier.height(24.dp))
