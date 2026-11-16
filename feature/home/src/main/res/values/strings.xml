@@ -13,7 +13,9 @@
     <string name="home_tomorrow">Demain</string>
     <string name="home_events">Événements</string>
     <string name="home_tasks">Tâches</string>
-    <string name="home_briefing_soon">agenda à venir</string>
+    <string name="home_agenda_not_connected">agenda non connecté</string>
+    <string name="home_first_event_at">· 1ʳᵉ à %1$s</string>
+    <string name="home_tasks_overdue">· %1$d en retard</string>
     <string name="home_wakes">réveils</string>
     <string name="home_my_alarms">Mes réveils</string>
     <string name="home_no_alarm">Aucune alarme pour l\'instant. Appuie sur + pour en créer une.</string>
@@ -63,6 +65,11 @@
     <string name="edit_delete">Supprimer cette alarme</string>
 
     <string name="settings_title">Réglages</string>
+    <string name="settings_calendar_title">Agenda du téléphone</string>
+    <string name="settings_calendar_text">Olafon lit les agendas déjà synchronisés sur ce téléphone (Google, Outlook, Samsung…) pour le briefing du matin. Rien ne quitte l\'appareil.</string>
+    <string name="settings_calendar_allow">Autoriser l\'accès à l\'agenda</string>
+    <string name="settings_calendar_none">Aucun agenda trouvé sur ce téléphone.</string>
+    <string name="settings_calendar_included">Agendas inclus dans le briefing</string>
     <string name="settings_emergency_title">Code de sortie d\'urgence</string>
     <string name="settings_emergency_text">Six chiffres pour arrêter une alarme sans défi en cas de vrai besoin. Chaque utilisation est enregistrée dans tes statistiques.</string>
     <string name="settings_emergency_set">Un code est défini</string>
