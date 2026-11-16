@@ -6,9 +6,11 @@ data class UserPreferences(
     val theme: ThemeMode = ThemeMode.SYSTEM,
     val hasEmergencyExitCode: Boolean = false,
     val eveningSyncHour: Int = DEFAULT_EVENING_SYNC_HOUR,
+    /** Calendars of the phone left out of the briefing. Every other calendar is included. */
+    val excludedCalendarIds: Set<Long> = emptySet(),
 ) {
     companion object {
-        const val DEFAULT_EVENING_SYNC_HOUR = 21
+        const val DEFAULT_EVENING_SYNC_HOUR = 22
     }
 }
 

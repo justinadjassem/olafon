@@ -18,6 +18,7 @@
     <string name="ring_awake_duration">Sonnerie arrêtée en %1$s</string>
     <string name="ring_awake_streak">Série de %1$d jour(s) sans snooze</string>
     <string name="ring_awake_done">Terminer</string>
+    <string name="ring_awake_briefing">Voir ma journée</string>
     <string name="ring_interrupted_shutdown">Sonnerie interrompue à %1$s : le téléphone a été éteint</string>
     <string name="ring_interrupted_unknown">Sonnerie interrompue : le téléphone a redémarré</string>
     <string name="ring_emergency_exit">Sortie d\'urgence</string>

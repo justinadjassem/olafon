@@ -6,6 +6,7 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
+import androidx.datastore.preferences.core.stringSetPreferencesKey
 import com.olafon.core.data.security.SecretHasher
 import com.olafon.core.domain.model.ThemeMode
 import com.olafon.core.domain.model.UserPreferences
@@ -27,6 +28,7 @@ class PreferencesRepositoryImpl @Inject constructor(
             theme = prefs[Keys.THEME]?.let { runCatching { ThemeMode.valueOf(it) }.getOrNull() } ?: ThemeMode.SYSTEM,
             hasEmergencyExitCode = prefs[Keys.EMERGENCY_CODE_HASH] != null,
             eveningSyncHour = prefs[Keys.EVENING_SYNC_HOUR] ?: UserPreferences.DEFAULT_EVENING_SYNC_HOUR,
+            excludedCalendarIds = prefs[Keys.EXCLUDED_CALENDARS].orEmpty().mapNotNull(String::toLongOrNull).toSet(),
         )
     }
 
@@ -41,6 +43,14 @@ class PreferencesRepositoryImpl @Inject constructor(
     override suspend fun setEveningSyncHour(hour: Int) {
         require(hour in 0..MAX_HOUR) { "hour must be in 0..23, was $hour" }
         dataStore.edit { it[Keys.EVENING_SYNC_HOUR] = hour }
+    }
+
+    override suspend fun setCalendarIncluded(calendarId: Long, included: Boolean) {
+        dataStore.edit { prefs ->
+            val excluded = prefs[Keys.EXCLUDED_CALENDARS].orEmpty()
+            val id = calendarId.toString()
+            prefs[Keys.EXCLUDED_CALENDARS] = if (included) excluded - id else excluded + id
+        }
     }
 
     override suspend fun setEmergencyExitCode(code: String?) {
@@ -63,6 +73,7 @@ class PreferencesRepositoryImpl @Inject constructor(
         val THEME = stringPreferencesKey("theme")
         val EMERGENCY_CODE_HASH = stringPreferencesKey("emergency_code_hash")
         val EVENING_SYNC_HOUR = intPreferencesKey("evening_sync_hour")
+        val EXCLUDED_CALENDARS = stringSetPreferencesKey("excluded_calendars")
     }
 
     private companion object {

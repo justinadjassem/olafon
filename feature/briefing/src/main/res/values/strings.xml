@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="briefing_title">Ta journée</string>
+    <string name="briefing_agenda">Agenda</string>
+    <plurals name="briefing_event_count">
+        <item quantity="one">%1$d événement</item>
+        <item quantity="other">%1$d événements</item>
+    </plurals>
+    <string name="briefing_no_event">Rien de prévu aujourd\'hui.</string>
+    <string name="briefing_all_day">Journée</string>
+    <string name="briefing_untitled">(Sans titre)</string>
+    <string name="briefing_tasks">Tâches</string>
+    <string name="briefing_synced_at">Synchronisé le %1$s</string>
+    <string name="briefing_no_data_title">Aucune donnée</string>
+    <string name="briefing_no_data_text">L\'agenda n\'a pas encore été synchronisé. Autorise l\'accès à l\'agenda dans les réglages : il sera lu chaque soir, sur le téléphone, sans compte ni réseau.</string>
+</resources>

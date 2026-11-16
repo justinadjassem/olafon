@@ -22,7 +22,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 /** What the success panel shows once the last challenge is passed and the sound has stopped. */
-data class WakeSummary(val duration: Duration, val streakDays: Int)
+data class WakeSummary(val duration: Duration, val streakDays: Int, val briefingEnabled: Boolean)
 
 data class RingUiState(
     /** Null while the service loads the alarm, or once the ring has ended. */
@@ -70,7 +70,8 @@ class RingViewModel @Inject constructor(
             controller.dismiss()
             val stats = computeStats(sessions.observeRecent(ComputeWakeStatsUseCase.HISTORY_LIMIT).first())
             val duration = Duration.between(ringing.session.ringAt, Instant.now(clock))
-            local.value = local.value.copy(summary = WakeSummary(duration, stats.streakDays))
+            local.value =
+                local.value.copy(summary = WakeSummary(duration, stats.streakDays, ringing.alarm.briefingEnabled))
         }
     }
 

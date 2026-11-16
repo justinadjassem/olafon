@@ -6,6 +6,7 @@ import com.olafon.feature.home.edit.EditAlarmViewModel
 object Routes {
     const val HOME = "home"
     const val SETTINGS = "settings"
+    const val BRIEFING = "briefing"
     const val EDIT_ALARM = "alarm/edit/{${EditAlarmViewModel.ARG_ALARM_ID}}"
 
     fun editAlarm(id: Long): String = "alarm/edit/$id"

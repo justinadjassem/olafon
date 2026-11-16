@@ -45,6 +45,7 @@ import com.olafon.core.designsystem.theme.OlafonColors
 import com.olafon.core.domain.model.RingInterruption
 import com.olafon.core.domain.model.RingingAlarm
 import com.olafon.feature.alarm.R
+import com.olafon.feature.briefing.BriefingScreen
 import com.olafon.feature.challenges.session.ChallengeSession
 import com.olafon.feature.challenges.session.label
 import java.time.Duration
@@ -72,8 +73,13 @@ fun RingScreen(viewModel: RingViewModel, onFinished: () -> Unit) {
 
     val ringing = state.ringing
     val summary = state.summary
+    var showBriefing by rememberSaveable { mutableStateOf(false) }
     when {
-        summary != null -> SuccessPanel(summary, onDone = viewModel::onFinish)
+        showBriefing -> BriefingScreen(
+            closeLabel = stringResource(R.string.ring_awake_done),
+            onClose = viewModel::onFinish,
+        )
+        summary != null -> SuccessPanel(summary, onBriefing = { showBriefing = true }, onDone = viewModel::onFinish)
         ringing == null -> Loading()
         state.challengesStarted -> Challenges(
             ringing = ringing,
@@ -282,7 +288,7 @@ private fun Challenges(
 
 /** Bottom of screen 5: « Tu es réveillé ! », how long it took, the streak, and the way out. */
 @Composable
-private fun SuccessPanel(summary: WakeSummary, onDone: () -> Unit) {
+private fun SuccessPanel(summary: WakeSummary, onBriefing: () -> Unit, onDone: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -336,8 +342,10 @@ private fun SuccessPanel(summary: WakeSummary, onDone: () -> Unit) {
                     )
                     Spacer(Modifier.height(20.dp))
                     PillButton(
-                        text = stringResource(R.string.ring_awake_done),
-                        onClick = onDone,
+                        text = stringResource(
+                            if (summary.briefingEnabled) R.string.ring_awake_briefing else R.string.ring_awake_done,
+                        ),
+                        onClick = if (summary.briefingEnabled) onBriefing else onDone,
                         style = PillStyle.DARK,
                         modifier = Modifier.fillMaxWidth(),
                     )

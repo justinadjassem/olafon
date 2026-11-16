@@ -7,6 +7,7 @@ import android.util.Log
 import androidx.core.content.ContextCompat
 import com.olafon.core.domain.usecase.FindInterruptedRingUseCase
 import com.olafon.core.domain.usecase.RescheduleAlarmsUseCase
+import com.olafon.core.domain.usecase.SyncBriefingUseCase
 import com.olafon.feature.alarm.service.AlarmService
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -27,6 +28,8 @@ class RescheduleReceiver : BroadcastReceiver() {
 
     @Inject lateinit var findInterruptedRing: FindInterruptedRingUseCase
 
+    @Inject lateinit var syncBriefing: SyncBriefingUseCase
+
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action !in HANDLED_ACTIONS) return
         val pending = goAsync()
@@ -35,6 +38,8 @@ class RescheduleReceiver : BroadcastReceiver() {
                 val count = rescheduleAlarms()
                 Log.i(TAG, "Rescheduled $count alarm(s) after ${intent.action}")
                 if (intent.action in BOOT_ACTIONS) resumeInterruptedRing(context)
+                // The calendar provider is only readable once the phone is unlocked; a failure here is harmless.
+                if (intent.action == Intent.ACTION_BOOT_COMPLETED) runCatching { syncBriefing() }
             } finally {
                 pending.finish()
             }

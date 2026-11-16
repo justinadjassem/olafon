@@ -42,6 +42,7 @@ import com.olafon.core.designsystem.component.RingProgress
 import com.olafon.core.designsystem.component.ToggleSwitch
 import com.olafon.core.designsystem.component.TopRoundedShape
 import com.olafon.core.designsystem.theme.OlafonColors
+import com.olafon.core.domain.briefing.Briefing
 import com.olafon.core.domain.model.Alarm
 import com.olafon.core.domain.model.WakeStats
 import com.olafon.feature.home.R
@@ -49,6 +50,7 @@ import com.olafon.feature.home.daysText
 import com.olafon.feature.home.shortLabel
 import com.olafon.feature.home.timeText
 import java.time.Duration
+import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -59,6 +61,7 @@ fun HomeScreen(
     onNewAlarm: () -> Unit,
     onEditAlarm: (Long) -> Unit,
     onSettings: () -> Unit,
+    onDay: () -> Unit,
     showTestActions: Boolean,
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
@@ -78,7 +81,7 @@ fun HomeScreen(
             item { Header(state.stats, onSettings) }
             item { NextAlarmCard(state.nextAlarm, state.loaded) }
             item { Spacer(Modifier.height(10.dp)) }
-            item { TomorrowCard(state.stats) }
+            item { TomorrowCard(state.stats, state.tomorrow, onConnect = onSettings) }
             item { Spacer(Modifier.height(10.dp)) }
             item {
                 OlafonCard(
@@ -133,9 +136,8 @@ fun HomeScreen(
                     stringResource(R.string.tab_day),
                     DsR.drawable.ic_calendar,
                     selected = false,
-                    enabled = false,
-                ) {
-                },
+                    onClick = onDay,
+                ),
             ),
             trailing = listOf(
                 BottomTab(
@@ -268,8 +270,17 @@ private fun NextAlarmCard(next: NextAlarm?, loaded: Boolean) {
 }
 
 @Composable
-private fun TomorrowCard(stats: WakeStats) {
-    OlafonCard {
+private fun TomorrowCard(stats: WakeStats, tomorrow: Briefing?, onConnect: () -> Unit) {
+    val firstEvent = tomorrow?.firstTimedEvent?.start
+        ?.atZone(ZoneId.systemDefault())
+        ?.format(DateTimeFormatter.ofPattern("HH:mm"))
+    val eventsDetail = when {
+        tomorrow == null -> stringResource(R.string.home_agenda_not_connected)
+        firstEvent != null -> stringResource(R.string.home_first_event_at, firstEvent)
+        else -> null
+    }
+    val tasksDetail = tomorrow?.overdueTasks?.takeIf { it > 0 }?.let { stringResource(R.string.home_tasks_overdue, it) }
+    OlafonCard(modifier = if (tomorrow == null) Modifier.clickable(onClick = onConnect) else Modifier) {
         Row(
             Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -277,8 +288,8 @@ private fun TomorrowCard(stats: WakeStats) {
         ) {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text(stringResource(R.string.home_tomorrow), style = MaterialTheme.typography.titleMedium)
-                Figure(stringResource(R.string.home_events), "–", stringResource(R.string.home_briefing_soon))
-                Figure(stringResource(R.string.home_tasks), "–", null)
+                Figure(stringResource(R.string.home_events), tomorrow?.events?.size?.toString() ?: "–", eventsDetail)
+                Figure(stringResource(R.string.home_tasks), tomorrow?.tasks?.size?.toString() ?: "–", tasksDetail)
             }
             RingProgress(
                 rings = listOf(

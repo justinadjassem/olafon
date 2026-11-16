@@ -2,10 +2,12 @@ package com.olafon.feature.home.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.olafon.core.domain.briefing.Briefing
 import com.olafon.core.domain.model.Alarm
 import com.olafon.core.domain.model.ChallengeType
 import com.olafon.core.domain.model.WakeStats
 import com.olafon.core.domain.repository.AlarmRepository
+import com.olafon.core.domain.repository.BriefingRepository
 import com.olafon.core.domain.repository.WakeSessionRepository
 import com.olafon.core.domain.usecase.ComputeNextTriggerUseCase
 import com.olafon.core.domain.usecase.ComputeWakeStatsUseCase
@@ -13,6 +15,7 @@ import com.olafon.core.domain.usecase.SaveAlarmUseCase
 import com.olafon.core.domain.usecase.ToggleAlarmUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import java.time.Clock
+import java.time.LocalDate
 import java.time.ZonedDateTime
 import javax.inject.Inject
 import kotlinx.coroutines.flow.SharingStarted
@@ -29,12 +32,15 @@ data class HomeUiState(
     val nextAlarm: NextAlarm? = null,
     val alarms: List<Alarm> = emptyList(),
     val stats: WakeStats = WakeStats(),
+    /** Tomorrow as cached by the last sync; null when the agenda was never read. */
+    val tomorrow: Briefing? = null,
 )
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     alarms: AlarmRepository,
     sessions: WakeSessionRepository,
+    briefings: BriefingRepository,
     private val computeNextTrigger: ComputeNextTriggerUseCase,
     computeStats: ComputeWakeStatsUseCase,
     private val toggleAlarm: ToggleAlarmUseCase,
@@ -44,12 +50,14 @@ class HomeViewModel @Inject constructor(
     val state: StateFlow<HomeUiState> = combine(
         alarms.observeAll(),
         sessions.observeRecent(ComputeWakeStatsUseCase.HISTORY_LIMIT),
-    ) { all, recent ->
+        briefings.observe(LocalDate.now(clock).plusDays(1)),
+    ) { all, recent, tomorrow ->
         HomeUiState(
             loaded = true,
             nextAlarm = nextAlarm(all),
             alarms = all.sortedWith(compareBy({ it.hour }, { it.minute })),
             stats = computeStats(recent),
+            tomorrow = tomorrow,
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(STOP_TIMEOUT_MS), HomeUiState())
 

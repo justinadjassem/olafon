@@ -1,5 +1,7 @@
 package com.olafon.feature.home.settings
 
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -14,7 +16,9 @@ import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -40,13 +44,19 @@ import com.olafon.core.designsystem.R as DsR
 import com.olafon.core.designsystem.component.OlafonCard
 import com.olafon.core.designsystem.component.PillButton
 import com.olafon.core.designsystem.component.PillStyle
+import com.olafon.core.designsystem.component.SettingRow
+import com.olafon.core.designsystem.component.ToggleSwitch
 import com.olafon.core.designsystem.theme.OlafonColors
 import com.olafon.feature.home.R
 
 /** Settings: today only the emergency exit code. Theme and sources come with later steps. */
 @Composable
 fun SettingsScreen(onBack: () -> Unit, viewModel: SettingsViewModel = hiltViewModel()) {
-    val hasCode by viewModel.hasEmergencyCode.collectAsStateWithLifecycle()
+    val state by viewModel.state.collectAsStateWithLifecycle()
+    val hasCode = state.hasEmergencyCode
+    val calendarPermission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) {
+        viewModel.refreshCalendars()
+    }
     var code by rememberSaveable { mutableStateOf("") }
     var rejected by rememberSaveable { mutableStateOf(false) }
 
@@ -56,7 +66,8 @@ fun SettingsScreen(onBack: () -> Unit, viewModel: SettingsViewModel = hiltViewMo
             .background(OlafonColors.Background)
             .statusBarsPadding()
             .navigationBarsPadding()
-            .padding(horizontal = 12.dp),
+            .padding(horizontal = 12.dp)
+            .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(10.dp),
     ) {
         Row(
@@ -82,6 +93,19 @@ fun SettingsScreen(onBack: () -> Unit, viewModel: SettingsViewModel = hiltViewMo
             }
             Text(stringResource(R.string.settings_title), style = MaterialTheme.typography.titleMedium)
             Spacer(Modifier.size(44.dp))
+        }
+        OlafonCard {
+            Text(stringResource(R.string.settings_calendar_title), style = MaterialTheme.typography.titleMedium)
+            Spacer(Modifier.height(6.dp))
+            Text(
+                stringResource(R.string.settings_calendar_text),
+                style = MaterialTheme.typography.bodyMedium,
+                color = OlafonColors.Muted,
+            )
+            Spacer(Modifier.height(12.dp))
+            CalendarChoice(state, onAllow = {
+                calendarPermission.launch(READ_CALENDAR)
+            }, onToggle = viewModel::onCalendarToggle)
         }
         OlafonCard {
             Text(stringResource(R.string.settings_emergency_title), style = MaterialTheme.typography.titleMedium)
@@ -151,3 +175,41 @@ fun SettingsScreen(onBack: () -> Unit, viewModel: SettingsViewModel = hiltViewMo
         }
     }
 }
+
+@Composable
+private fun CalendarChoice(state: SettingsUiState, onAllow: () -> Unit, onToggle: (Long, Boolean) -> Unit) {
+    when {
+        !state.calendarPermission -> PillButton(
+            text = stringResource(R.string.settings_calendar_allow),
+            onClick = onAllow,
+            modifier = Modifier.fillMaxWidth(),
+        )
+        state.calendars.isEmpty() -> Text(
+            stringResource(R.string.settings_calendar_none),
+            style = MaterialTheme.typography.bodyMedium,
+            color = OlafonColors.Muted,
+        )
+        else -> {
+            Text(
+                stringResource(R.string.settings_calendar_included),
+                style = MaterialTheme.typography.labelMedium,
+                color = OlafonColors.Lime,
+            )
+            state.calendars.forEachIndexed { index, calendar ->
+                SettingRow(
+                    title = calendar.name,
+                    subtitle = calendar.account,
+                    divider = index < state.calendars.lastIndex,
+                    trailing = {
+                        ToggleSwitch(
+                            checked = calendar.id !in state.excludedCalendarIds,
+                            onCheckedChange = { onToggle(calendar.id, it) },
+                        )
+                    },
+                )
+            }
+        }
+    }
+}
+
+private const val READ_CALENDAR = "android.permission.READ_CALENDAR"

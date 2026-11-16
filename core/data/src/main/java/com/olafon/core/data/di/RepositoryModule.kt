@@ -1,10 +1,12 @@
 package com.olafon.core.data.di
 
 import com.olafon.core.data.repository.AlarmRepositoryImpl
+import com.olafon.core.data.repository.BriefingRepositoryImpl
 import com.olafon.core.data.repository.PreferencesRepositoryImpl
 import com.olafon.core.data.repository.QuestionRepositoryImpl
 import com.olafon.core.data.repository.WakeSessionRepositoryImpl
 import com.olafon.core.domain.repository.AlarmRepository
+import com.olafon.core.domain.repository.BriefingRepository
 import com.olafon.core.domain.repository.PreferencesRepository
 import com.olafon.core.domain.repository.QuestionRepository
 import com.olafon.core.domain.repository.WakeSessionRepository
@@ -24,6 +26,9 @@ abstract class RepositoryModule {
 
     @Binds
     abstract fun bindWakeSessionRepository(impl: WakeSessionRepositoryImpl): WakeSessionRepository
+
+    @Binds
+    abstract fun bindBriefingRepository(impl: BriefingRepositoryImpl): BriefingRepository
 
     @Binds
     abstract fun bindPreferencesRepository(impl: PreferencesRepositoryImpl): PreferencesRepository
