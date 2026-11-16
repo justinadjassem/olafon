@@ -1,0 +1,37 @@
+package com.olafon.core.data.db.dao
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.Query
+import com.olafon.core.data.db.entity.WakeSessionEntity
+import kotlinx.coroutines.flow.Flow
+
+@Dao
+interface WakeSessionDao {
+    @Insert
+    suspend fun insert(session: WakeSessionEntity): Long
+
+    @Query(
+        "UPDATE wake_sessions SET interruptedAt = :at, cleanShutdown = :clean, interruptionBattery = :battery " +
+            "WHERE id = :id",
+    )
+    suspend fun recordInterruption(id: Long, at: Long, clean: Boolean, battery: Int?)
+
+    @Query("SELECT * FROM wake_sessions WHERE id = :id")
+    suspend fun get(id: Long): WakeSessionEntity?
+
+    @Query("UPDATE wake_sessions SET attempts = attempts + 1 WHERE id = :id")
+    suspend fun incrementAttempts(id: Long)
+
+    @Query("UPDATE wake_sessions SET snoozes = snoozes + 1 WHERE id = :id")
+    suspend fun incrementSnoozes(id: Long)
+
+    @Query("UPDATE wake_sessions SET dismissedAt = :dismissedAt, emergencyExit = :emergency WHERE id = :id")
+    suspend fun dismiss(id: Long, dismissedAt: Long, emergency: Boolean)
+
+    @Query("SELECT * FROM wake_sessions WHERE dismissedAt IS NULL AND ringAt >= :since ORDER BY ringAt DESC LIMIT 1")
+    suspend fun latestOpenSince(since: Long): WakeSessionEntity?
+
+    @Query("SELECT * FROM wake_sessions ORDER BY ringAt DESC LIMIT :limit")
+    fun observeRecent(limit: Int): Flow<List<WakeSessionEntity>>
+}

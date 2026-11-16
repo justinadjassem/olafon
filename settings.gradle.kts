@@ -24,3 +24,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "olafon"
 include(":app")
+include(":core:domain", ":core:data", ":core:designsystem")
+include(":feature:alarm", ":feature:briefing", ":feature:challenges", ":feature:home")
+include(":integration:calendar")

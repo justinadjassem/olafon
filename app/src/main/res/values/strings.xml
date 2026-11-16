@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">olafon</string>
+    <string name="app_name">Olafon</string>
+    <string name="action_back">Retour</string>
+
+    <string name="shortcut_new_alarm_short">Nouvelle alarme</string>
+    <string name="shortcut_new_alarm_long">Créer une nouvelle alarme</string>
+    <string name="shortcut_day_short">Ma journée</string>
+    <string name="shortcut_day_long">Voir le briefing du jour</string>
+
+    <string name="widget_next_alarm_name">Prochain réveil</string>
+    <string name="widget_next_alarm_description">L\'heure de ta prochaine alarme Olafon.</string>
+    <string name="widget_next_alarm_title">Prochain réveil</string>
+    <string name="widget_no_alarm">Aucune alarme</string>
+    <string name="widget_tap_to_add">Touche pour en créer une</string>
 </resources>

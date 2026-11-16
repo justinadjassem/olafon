@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_alarm"
+        android:shortcutId="new_alarm"
+        android:shortcutLongLabel="@string/shortcut_new_alarm_long"
+        android:shortcutShortLabel="@string/shortcut_new_alarm_short">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.olafon.MainActivity"
+            android:targetPackage="com.olafon">
+            <extra
+                android:name="com.olafon.extra.ROUTE"
+                android:value="alarm/edit/0" />
+        </intent>
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_day"
+        android:shortcutId="day"
+        android:shortcutLongLabel="@string/shortcut_day_long"
+        android:shortcutShortLabel="@string/shortcut_day_short">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.olafon.MainActivity"
+            android:targetPackage="com.olafon">
+            <extra
+                android:name="com.olafon.extra.ROUTE"
+                android:value="briefing" />
+        </intent>
+    </shortcut>
+</shortcuts>
