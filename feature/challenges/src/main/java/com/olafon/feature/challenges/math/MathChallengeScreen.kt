@@ -6,9 +6,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -21,16 +21,17 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import com.olafon.core.designsystem.component.PillButton
+import com.olafon.core.designsystem.theme.OlafonColors
 import com.olafon.core.domain.challenge.MathChallenge
 import com.olafon.feature.challenges.R
-import com.olafon.feature.challenges.session.ChallengeSessionViewModel
 
 /** One operation typed on the numeric keypad. The same operation stays for a few tries, then a new one is drawn. */
 @Composable
 fun MathChallengeScreen(
     challenge: MathChallenge,
-    failedAttempts: Int,
     lastAnswerWrong: Boolean,
+    newAfterFailures: Boolean,
     onSubmit: (Int?) -> Unit,
     onEdited: () -> Unit,
     modifier: Modifier = Modifier,
@@ -42,21 +43,24 @@ fun MathChallengeScreen(
     }
 
     Column(modifier = modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+        Spacer(Modifier.height(32.dp))
         Text(
-            text = "${challenge.left} ${challenge.operation.symbol} ${challenge.right} = ?",
+            text = "${challenge.left} ${challenge.operation.symbol} ${challenge.right}",
             style = MaterialTheme.typography.displayMedium,
+            color = OlafonColors.Lime,
         )
         Spacer(Modifier.height(8.dp))
-        val feedback = when {
-            lastAnswerWrong && failedAttempts == 0 -> stringResource(R.string.math_new)
-            lastAnswerWrong -> stringResource(
-                R.string.math_wrong,
-                ChallengeSessionViewModel.MAX_ATTEMPTS - failedAttempts,
-            )
-            else -> ""
+        val hint = when {
+            newAfterFailures -> stringResource(R.string.math_new)
+            lastAnswerWrong -> stringResource(R.string.math_wrong)
+            else -> stringResource(R.string.math_hint)
         }
-        Text(text = feedback, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.error)
-        Spacer(Modifier.height(16.dp))
+        Text(
+            hint,
+            style = MaterialTheme.typography.bodySmall,
+            color = if (lastAnswerWrong) OlafonColors.Error else OlafonColors.Muted,
+        )
+        Spacer(Modifier.weight(1f))
         OutlinedTextField(
             value = input,
             onValueChange = { value ->
@@ -65,13 +69,26 @@ fun MathChallengeScreen(
             },
             label = { Text(stringResource(R.string.math_answer)) },
             singleLine = true,
+            textStyle = MaterialTheme.typography.headlineSmall,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number, imeAction = ImeAction.Done),
             keyboardActions = KeyboardActions(onDone = { submit() }),
+            shape = MaterialTheme.shapes.medium,
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedBorderColor = OlafonColors.Lime,
+                unfocusedBorderColor = OlafonColors.Outline,
+                focusedLabelColor = OlafonColors.Lime,
+                unfocusedLabelColor = OlafonColors.Muted,
+                cursorColor = OlafonColors.Lime,
+            ),
             modifier = Modifier.fillMaxWidth(),
         )
-        Spacer(Modifier.height(16.dp))
-        Button(onClick = submit, enabled = input.isNotEmpty(), modifier = Modifier.fillMaxWidth()) {
-            Text(stringResource(R.string.action_validate))
-        }
+        Spacer(Modifier.height(12.dp))
+        PillButton(
+            text = stringResource(R.string.action_validate),
+            onClick = submit,
+            enabled = input.isNotEmpty(),
+            height = 56,
+            modifier = Modifier.fillMaxWidth(),
+        )
     }
 }

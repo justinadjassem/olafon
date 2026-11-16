@@ -74,11 +74,12 @@ fun HomeScreen(
                 .fillMaxSize()
                 .statusBarsPadding(),
             contentPadding = PaddingValues(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 110.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
             item { Header(state.stats, onSettings) }
             item { NextAlarmCard(state.nextAlarm, state.loaded) }
+            item { Spacer(Modifier.height(10.dp)) }
             item { TomorrowCard(state.stats) }
+            item { Spacer(Modifier.height(10.dp)) }
             item {
                 OlafonCard(
                     shape = TopRoundedShape,
@@ -276,8 +277,8 @@ private fun TomorrowCard(stats: WakeStats) {
         ) {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text(stringResource(R.string.home_tomorrow), style = MaterialTheme.typography.titleMedium)
-                Figure(stringResource(R.string.home_events), "—", stringResource(R.string.home_briefing_soon))
-                Figure(stringResource(R.string.home_tasks), "—", null)
+                Figure(stringResource(R.string.home_events), "–", stringResource(R.string.home_briefing_soon))
+                Figure(stringResource(R.string.home_tasks), "–", null)
             }
             RingProgress(
                 rings = listOf(
@@ -305,7 +306,17 @@ private fun Figure(label: String, value: String, detail: String?) {
     Column {
         Text(label, style = MaterialTheme.typography.bodySmall, color = OlafonColors.Muted)
         Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-            Text(value, style = MaterialTheme.typography.headlineSmall, color = OlafonColors.Lime)
+            Text(
+                value,
+                style = MaterialTheme.typography.headlineSmall,
+                color = if (value ==
+                    "–"
+                ) {
+                    OlafonColors.Muted
+                } else {
+                    OlafonColors.Lime
+                },
+            )
             if (detail != null) {
                 Text(
                     detail,
