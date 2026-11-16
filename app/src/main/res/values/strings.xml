@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Olafon</string>
+    <string name="action_back">Retour</string>
 </resources>
