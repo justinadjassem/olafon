@@ -41,6 +41,7 @@ En build debug, l'accueil affiche un bouton « Test dans 1 min » qui programme 
 6. Changement de fuseau ou d'heure manuelle : l'alarme se recale.
 7. Téléphone éteint pendant la sonnerie puis rallumé : elle reprend dès le démarrage, sur la même session, et l'écran de réveil signale l'interruption avec l'heure de l'extinction.
 8. « Commencer » : le schéma s'affiche puis disparaît, un tracé faux laisse encore deux essais, la question et le calcul s'enchaînent, et la sonnerie s'arrête seulement après le dernier défi réussi.
+9. Agenda autorisé dans les réglages : la carte « Demain » de l'accueil affiche les événements, et « Voir ma journée » après le dernier défi ouvre le briefing, même en mode avion.
 
 ```bash
 adb shell dumpsys alarm | grep com.olafon          # alarmes programmées
@@ -59,6 +60,8 @@ adb shell dumpsys deviceidle unforce
 | `:core:designsystem` | Thème, couleurs, typographie, composants partagés |
 | `:feature:alarm` | Programmation, réception et sonnerie des alarmes |
 | `:feature:challenges` | Générateurs de défis et écrans associés |
+| `:feature:briefing` | Écran du briefing et synchro du soir (WorkManager) |
+| `:integration:calendar` | Lecture locale des agendas du téléphone |
 | `:feature:home` | Liste des alarmes et éditeur |
 
 Les versions des bibliothèques sont centralisées dans `gradle/libs.versions.toml`.
