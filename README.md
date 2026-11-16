@@ -31,7 +31,7 @@ La CI GitHub Actions exécute ces trois étapes puis construit l'APK debug sur c
 
 ## Tester le moteur d'alarme sur un vrai téléphone
 
-L'écran provisoire de l'app permet de programmer une alarme test dans 1 ou 2 minutes. Scénarios à rejouer avant chaque release, de préférence sur deux marques (Tecno/Infinix, Xiaomi, Samsung) :
+En build debug, l'accueil affiche un bouton « Test dans 1 min » qui programme une alarme enchaînant les trois défis. Scénarios à rejouer avant chaque release, de préférence sur deux marques (Tecno/Infinix, Xiaomi, Samsung) :
 
 1. Téléphone verrouillé, écran éteint : l'alarme sonne et l'écran s'allume.
 2. Mode Doze forcé puis alarme : elle sonne.
@@ -40,7 +40,7 @@ L'écran provisoire de l'app permet de programmer une alarme test dans 1 ou 2 mi
 5. Volume baissé depuis le panneau système pendant la sonnerie : il remonte en deux secondes.
 6. Changement de fuseau ou d'heure manuelle : l'alarme se recale.
 7. Téléphone éteint pendant la sonnerie puis rallumé : elle reprend dès le démarrage, sur la même session, et l'écran de réveil signale l'interruption avec l'heure de l'extinction.
-8. « Commencer les défis » : le schéma s'affiche puis disparaît, un tracé faux laisse encore deux essais, la question et le calcul s'enchaînent, et la sonnerie s'arrête seulement après le dernier défi réussi.
+8. « Commencer » : le schéma s'affiche puis disparaît, un tracé faux laisse encore deux essais, la question et le calcul s'enchaînent, et la sonnerie s'arrête seulement après le dernier défi réussi.
 
 ```bash
 adb shell dumpsys alarm | grep com.olafon          # alarmes programmées

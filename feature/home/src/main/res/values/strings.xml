@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="greeting_morning">Bonjour !</string>
+    <string name="greeting_afternoon">Bon après-midi !</string>
+    <string name="greeting_evening">Bonsoir !</string>
+    <string name="greeting_subtitle">Prêt pour demain ?</string>
+    <string name="streak">Série de réveils sans rappel</string>
+    <string name="home_next_alarm">Prochain réveil</string>
+    <string name="home_rings_in">Sonne dans</string>
+    <string name="duration_h_min">%1$d h %2$02d</string>
+    <string name="home_chip_briefing">Briefing</string>
+    <string name="home_no_next_alarm">Aucune alarme active</string>
+    <string name="home_tomorrow">Demain</string>
+    <string name="home_events">Événements</string>
+    <string name="home_tasks">Tâches</string>
+    <string name="home_briefing_soon">agenda à venir</string>
+    <string name="home_wakes">réveils</string>
+    <string name="home_my_alarms">Mes réveils</string>
+    <string name="home_no_alarm">Aucune alarme pour l\'instant. Appuie sur + pour en créer une.</string>
+    <string name="home_test_alarm">Test dans 1 min</string>
+    <string name="tab_home">Accueil</string>
+    <string name="tab_day">Journée</string>
+    <string name="tab_stats">Stats</string>
+    <string name="tab_tasks">Tâches</string>
+
+    <string name="days_once">Une fois</string>
+    <string name="days_every_day">Tous les jours</string>
+    <string name="days_weekdays">Semaine · lun – ven</string>
+    <string name="days_weekend">Week-end · sam, dim</string>
+
+    <string name="challenge_pattern">Schéma à reproduire</string>
+    <string name="challenge_question">Question / réponse</string>
+    <string name="challenge_math">Calcul</string>
+    <string name="challenge_pattern_short">Schéma</string>
+    <string name="challenge_question_short">Question</string>
+    <string name="challenge_math_short">Calcul</string>
+    <string name="challenge_pattern_desc">Mémorise un motif, puis trace-le</string>
+    <string name="challenge_question_desc">Culture générale, logique, vocabulaire</string>
+    <string name="challenge_math_desc">Une opération au pavé numérique</string>
+    <string name="difficulty_easy">Facile</string>
+    <string name="difficulty_medium">Moyen</string>
+    <string name="difficulty_hard">Difficile</string>
+
+    <string name="action_back">Retour</string>
+    <string name="edit_title_new">Nouvelle alarme</string>
+    <string name="edit_title_edit">Modifier l\'alarme</string>
+    <string name="edit_label">Nom (facultatif)</string>
+    <string name="edit_challenges">Défis</string>
+    <string name="edit_challenges_count">%1$d défi(s) · dans l\'ordre</string>
+    <string name="edit_difficulty">Difficulté</string>
+    <string name="edit_snooze">Rappel</string>
+    <string name="edit_snooze_none">Aucun</string>
+    <string name="edit_snooze_once">1 fois</string>
+    <string name="edit_snooze_times">%1$d fois</string>
+    <string name="edit_volume">Volume</string>
+    <string name="edit_volume_progressive">Progressif</string>
+    <string name="edit_volume_full">Plein</string>
+    <string name="edit_ringtone">Sonnerie</string>
+    <string name="edit_ringtone_default">Par défaut · %1$s</string>
+    <string name="edit_briefing">Briefing du matin</string>
+    <string name="edit_briefing_subtitle">Agenda · tâches</string>
+    <string name="edit_save">Enregistrer l\'alarme</string>
+    <string name="edit_delete">Supprimer cette alarme</string>
+
+    <string name="settings_title">Réglages</string>
+    <string name="settings_emergency_title">Code de sortie d\'urgence</string>
+    <string name="settings_emergency_text">Six chiffres pour arrêter une alarme sans défi en cas de vrai besoin. Chaque utilisation est enregistrée dans tes statistiques.</string>
+    <string name="settings_emergency_set">Un code est défini</string>
+    <string name="settings_emergency_unset">Aucun code défini</string>
+    <string name="settings_emergency_new_code">Nouveau code à 6 chiffres</string>
+    <string name="settings_emergency_invalid">Le code doit faire exactement 6 chiffres</string>
+    <string name="settings_emergency_save">Enregistrer le code</string>
+    <string name="settings_emergency_remove">Supprimer le code</string>
+</resources>
