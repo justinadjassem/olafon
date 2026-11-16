@@ -6,12 +6,18 @@
     <string name="ring_title">Réveil</string>
     <string name="ring_notification_text">Appuie pour commencer les défis</string>
     <string name="ring_loading">Chargement de l\'alarme…</string>
-    <string name="ring_start_challenges">Commencer les défis</string>
-    <plurals name="ring_snooze">
-        <item quantity="one">Rappel dans 5 min (%1$d restant)</item>
-        <item quantity="other">Rappel dans 5 min (%1$d restants)</item>
+    <string name="ring_start_challenges">Commencer</string>
+    <string name="ring_volume_locked">Volume verrouillé</string>
+    <plurals name="ring_challenge_count">
+        <item quantity="one">%1$d défi pour arrêter la sonnerie</item>
+        <item quantity="other">%1$d défis pour arrêter la sonnerie</item>
     </plurals>
-    <string name="ring_snooze_exhausted">Plus de rappel possible</string>
+    <string name="ring_snooze">Snooze 5 min · %1$d restant(s)</string>
+    <string name="ring_snooze_exhausted">Plus de snooze possible</string>
+    <string name="ring_awake_title">Tu es réveillé !</string>
+    <string name="ring_awake_duration">Sonnerie arrêtée en %1$s</string>
+    <string name="ring_awake_streak">Série de %1$d jour(s) sans snooze</string>
+    <string name="ring_awake_done">Terminer</string>
     <string name="ring_interrupted_shutdown">Sonnerie interrompue à %1$s : le téléphone a été éteint</string>
     <string name="ring_interrupted_unknown">Sonnerie interrompue : le téléphone a redémarré</string>
     <string name="ring_emergency_exit">Sortie d\'urgence</string>
