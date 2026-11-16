@@ -1,6 +1,7 @@
 package com.olafon.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -15,8 +16,15 @@ import com.olafon.feature.home.home.HomeScreen
 import com.olafon.feature.home.settings.SettingsScreen
 
 @Composable
-fun OlafonNavHost(showTestActions: Boolean) {
+fun OlafonNavHost(showTestActions: Boolean, openRoute: String? = null, onRouteOpened: () -> Unit = {}) {
     val navController = rememberNavController()
+    // A launcher shortcut or the widget asks for a screen: open it above home, once.
+    LaunchedEffect(openRoute) {
+        if (openRoute != null) {
+            navController.navigate(openRoute) { launchSingleTop = true }
+            onRouteOpened()
+        }
+    }
     NavHost(navController = navController, startDestination = Routes.HOME) {
         composable(Routes.HOME) {
             HomeScreen(

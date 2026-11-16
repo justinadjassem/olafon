@@ -42,6 +42,7 @@ En build debug, l'accueil affiche un bouton « Test dans 1 min » qui programme 
 7. Téléphone éteint pendant la sonnerie puis rallumé : elle reprend dès le démarrage, sur la même session, et l'écran de réveil signale l'interruption avec l'heure de l'extinction.
 8. « Commencer » : le schéma s'affiche puis disparaît, un tracé faux laisse encore deux essais, la question et le calcul s'enchaînent, et la sonnerie s'arrête seulement après le dernier défi réussi.
 9. Agenda autorisé dans les réglages : la carte « Demain » de l'accueil affiche les événements, et « Voir ma journée » après le dernier défi ouvre le briefing, même en mode avion.
+10. Appui long sur l'icône : « Nouvelle alarme » et « Ma journée » ouvrent le bon écran. Widget « Prochain réveil » posé sur l'accueil : il suit chaque création, modification et sonnerie d'alarme.
 
 ```bash
 adb shell dumpsys alarm | grep com.olafon          # alarmes programmées

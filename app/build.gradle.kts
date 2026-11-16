@@ -65,6 +65,8 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     implementation(libs.hilt.work)
     implementation(libs.work.runtime)
+    implementation(libs.glance.appwidget)
+    implementation(libs.coroutines.android)
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
