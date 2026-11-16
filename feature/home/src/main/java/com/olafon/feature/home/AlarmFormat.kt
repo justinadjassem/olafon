@@ -39,6 +39,16 @@ fun ChallengeType.label(): String = stringResource(
     },
 )
 
+/** « Schéma », « Question », « Calcul »: fits a chip. */
+@Composable
+fun ChallengeType.shortLabel(): String = stringResource(
+    when (this) {
+        ChallengeType.PATTERN -> R.string.challenge_pattern_short
+        ChallengeType.QUESTION -> R.string.challenge_question_short
+        ChallengeType.MATH -> R.string.challenge_math_short
+    },
+)
+
 @Composable
 fun Difficulty.label(): String = stringResource(
     when (this) {

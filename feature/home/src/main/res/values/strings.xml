@@ -31,6 +31,9 @@
     <string name="challenge_pattern">Schéma à reproduire</string>
     <string name="challenge_question">Question / réponse</string>
     <string name="challenge_math">Calcul</string>
+    <string name="challenge_pattern_short">Schéma</string>
+    <string name="challenge_question_short">Question</string>
+    <string name="challenge_math_short">Calcul</string>
     <string name="challenge_pattern_desc">Mémorise un motif, puis trace-le</string>
     <string name="challenge_question_desc">Culture générale, logique, vocabulaire</string>
     <string name="challenge_math_desc">Une opération au pavé numérique</string>

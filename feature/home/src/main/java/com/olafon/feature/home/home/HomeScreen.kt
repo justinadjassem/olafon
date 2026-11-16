@@ -46,7 +46,7 @@ import com.olafon.core.domain.model.Alarm
 import com.olafon.core.domain.model.WakeStats
 import com.olafon.feature.home.R
 import com.olafon.feature.home.daysText
-import com.olafon.feature.home.label
+import com.olafon.feature.home.shortLabel
 import com.olafon.feature.home.timeText
 import java.time.Duration
 import java.time.ZonedDateTime
@@ -260,7 +260,7 @@ private fun NextAlarmCard(next: NextAlarm?, loaded: Boolean) {
         }
         Spacer(Modifier.height(12.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            next?.alarm?.challenges?.forEach { Chip(it.label()) }
+            next?.alarm?.challenges?.forEach { Chip(it.shortLabel()) }
             if (next?.alarm?.briefingEnabled == true) Chip(stringResource(R.string.home_chip_briefing))
             if (next == null && loaded) Chip(stringResource(R.string.home_no_next_alarm))
         }
